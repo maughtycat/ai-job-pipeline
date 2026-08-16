@@ -18,7 +18,6 @@ st.set_page_config(
 CACHE_DIR = Path("examples/output")
 
 
-@st.cache_data(ttl=0)
 def load_results():
     results = []
     for f in sorted(CACHE_DIR.glob("*.json")):
