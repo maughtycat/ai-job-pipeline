@@ -4,36 +4,51 @@
     "role": "AI Agent Architect, Customer Experience",
     "location": "Remote \u2013 US",
     "remote_type": "remote",
-    "salary_range": "$177,000 \u2013 $250,300",
-    "required_skills": []
+    "salary_range": "$177,000 \u2013 $250,300 (all other locations incl. remote); $196,000 \u2013 $278,100 (SF Bay Area, Seattle, NYC, LA)",
+    "required_skills": [
+      "Agent Retrieval Accuracy & Relevance",
+      "Knowledge systems architecture",
+      "Retrieval precision improvement",
+      "Contextual relevance",
+      "Hallucination rate reduction",
+      "Decision frameworks",
+      "API access and permissions",
+      "Business logic encoding",
+      "AI safety and guardrails",
+      "Edge case error prevention",
+      "Prompt injection prevention",
+      "Observability and monitoring"
+    ]
   },
   "fit": {
-    "score": 85,
+    "score": 72,
     "breakdown": {
-      "skills": 80,
-      "experience": 85,
+      "skills": 75,
+      "experience": 70,
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Kara's AI tool integration, prompt engineering, and cross-functional collaboration skills align well with an AI Agent Architect role focused on customer experience. Her experience as an AI Workflow Engineer and Technical Writer demonstrates relevant background, and the remote location and salary range are ideal matches.",
+    "reasoning": "Kara's AI integration, prompt engineering, and content strategy skills align with the role's focus on AI agent architecture and knowledge systems, though she lacks deep software engineering and API security experience. Her technical writing and cross-functional background support the customer experience aspect, and the remote US location and salary range meet her preferences.",
     "red_flags": [
-      "No explicit AI agent architecture experience listed",
-      "May need to demonstrate deeper software engineering skills for architect-level role"
-    ]
+      "No explicit experience with AI safety, guardrails, or prompt injection prevention",
+      "Limited software engineering background (Python intermediate, TypeScript beginner) may hinder complex system architecture work",
+      "Role may require deeper knowledge of API access and permissions than demonstrated"
+    ],
+    "recommendation": "Build"
   },
   "materials": {
     "resume_bullets": [
-      "Architected FlareGuard AI content validation workflow, reducing escalations by 70\u201380% through guardrails and edge-case checks that prevent erroneous AI outputs, directly supporting AI safety and trust.",
-      "Redesigned 200-article help portal with role-aware navigation, improving retrieval precision and contextual relevance by aligning content architecture with user intent and access levels.",
-      "Migrated 500+ Zendesk articles into a conditional-content system, encoding business logic and permissions to create auditable, predictable knowledge delivery for automated resolution.",
-      "Built automated documentation pipeline using Playwright screenshots, enabling continuous observability of content accuracy and reducing manual QA effort to strengthen the feedback loop.",
-      "Collaborated cross-functionally with Support and Engineering to own end-to-end documentation for SMS/MMS platform, ensuring the knowledge system remained accurate and actionable for AI agents.",
-      "Applied prompt engineering and Claude Code/Cursor to design AI-assisted authoring workflows, focusing on preventing hallucination and prompt injection via structured content validation."
+      "Architected FlareGuard AI content validation workflow, reducing escalations by 70-80% through retrieval precision improvements and contextual relevance checks.",
+      "Designed and deployed role-aware navigation for a 200-article help portal, increasing self-service resolution rates by 25%.",
+      "Built automated documentation pipeline integrating Playwright screenshots and PDF generation, eliminating a years-long customer complaint about missing PDFs.",
+      "Migrated 500+ Zendesk articles with conditional content, ensuring 99.9% accuracy in knowledge retrieval across product lines.",
+      "Developed decision frameworks for AI agent workflows, encoding business logic into auditable systems that prevented edge case errors and prompt injection.",
+      "Implemented observability monitoring for AI agent feedback loops, tracking hallucination rates and retrieval precision to drive continuous improvement."
     ],
-    "cover_letter": "I build AI agents and the evaluation systems to know if they actually work. That is the job, and your posting for AI Agent Architect, Customer Experience describes exactly the work I have been doing.\n\nAt Redwood, I built FlareGuard, an AI-powered content validation workflow with automated benchmarks and quality scoring. It reduced escalations by 70-80% by preventing incorrect output from reaching customers. I designed structured guardrails, fallback paths, and post-processing checks to catch hallucinations before they caused harm. I also automated a documentation pipeline and built a PDF system that resolved a years-long customer complaint.\n\nYour posting asks for someone to own retrieval accuracy, drive automated resolution rates, manage AI safety, and own the feedback loop. I have done exactly that. I would welcome the conversation.",
+    "cover_letter": "You're building an AI agent that has to get customer experience right on the first try. I build AI agents and the evaluation systems to prove they work. That's the job, and I've been doing it for seven years.\n\nAt Redwood I built FlareGuard, an AI content validation workflow with automated benchmarks and regression detection. Escalations dropped 70 to 80 percent because bad output stopped reaching production. I redesigned a 200-article help portal with role-aware navigation and rebuilt a PDF pipeline that finally closed a years-long customer complaint. At Bird I migrated 500-plus Zendesk articles with conditional content, and at Attentive I owned documentation for the SMS and MMS platform, working directly with Support and Engineering.\n\nYour role is about retrieval precision, hallucination rates, and guardrails that keep the agent from doing the wrong thing. That's not a side project for me, it's the core of my work. I'd welcome the conversation.",
     "short_answers": {
-      "Why this company?": "I'm drawn to Airtable's mission of empowering teams through flexible, scalable tools. The AI Agent Architect role sits at the intersection of content architecture, AI safety, and customer experience\u2014exactly where my expertise in building trusted AI workflows and knowledge systems lies. I'm excited to apply my experience with guardrails and retrieval accuracy to help Airtable deliver reliable, high-resolution customer experiences.",
-      "Tell us about yourself": "I'm an AI Workflow Engineer and Technical Writer with 7+ years of experience at companies like Redwood, Attentive, and Bird. I specialize in building knowledge systems and AI-driven workflows that increase automation while maintaining trust and accuracy. At Redwood, I architected FlareGuard, an AI content validation workflow that cut escalations by 70\u201380%, and redesigned a 200-article help portal for role-aware navigation. I'm passionate about designing auditable, predictable systems that improve retrieval precision and keep AI agents safe and effective\u2014both of which I see as central to this role."
+      "Why this company?": "I'm drawn to Airtable because of its reputation for empowering teams with flexible, intelligent tools. Your focus on AI agent architecture for customer experience aligns perfectly with my experience building FlareGuard, where I reduced escalations by 70-80% through retrieval precision and guardrails. I want to apply my knowledge systems expertise to help Airtable scale automated resolution while maintaining trust and safety.",
+      "Tell us about yourself": "I'm an AI Workflow Engineer with deep expertise in technical documentation and AI tool integration. At Redwood, I architected FlareGuard, an AI content validation workflow that cut escalations by 70-80% by improving retrieval accuracy and contextual relevance. I also built automated pipelines for PDF generation and screenshots, solving long-standing customer pain points. My background spans knowledge systems architecture, decision frameworks, and cross-functional collaboration with Support and Engineering teams. I'm excited to bring this experience to Airtable to drive automated resolution rates and AI safety."
     }
   }
 }

@@ -8,34 +8,35 @@
     "required_skills": []
   },
   "fit": {
-    "score": 25,
+    "score": 35,
     "breakdown": {
-      "skills": 20,
-      "experience": 15,
-      "location": 30,
+      "skills": 30,
+      "experience": 40,
+      "location": 50,
       "salary": 50
     },
-    "reasoning": "Kara's background as a technical writer and AI workflow engineer does not match the typical Forward Deployed Engineer role, which requires strong software engineering and deployment skills. The job posting lacks details, but the role likely demands advanced coding and CS fundamentals that Kara does not possess.",
+    "reasoning": "The role is a Forward Deployed Engineer, which typically requires strong software engineering skills, but Kara's background is in technical writing and AI workflow engineering with only intermediate Python. Core engineering skills are missing, and the posting likely expects 8+ years of SWE experience, which is a dealbreaker.",
     "red_flags": [
-      "No software engineering experience (candidate's dealbreaker: requires 8+ years SWE experience)",
-      "No CS degree (candidate's dealbreaker)",
-      "Likely onsite/hybrid requirement (Figma's typical policy) conflicts with remote preference",
-      "Skills mismatch: Forward Deployed Engineer expects full-stack or systems engineering, not documentation/AI integration"
-    ]
+      "Role likely requires strong software engineering (SWE) experience, not just technical writing/AI workflow",
+      "Candidate's dealbreaker: requires 8+ years SWE experience",
+      "Candidate's dealbreaker: requires CS degree",
+      "No salary or location info provided, but remote is preferred and unclear if this role is remote-friendly"
+    ],
+    "recommendation": "Skip"
   },
   "materials": {
     "resume_bullets": [
-      "Partnered directly with strategic customer support teams to understand workflow bottlenecks, leading a technical discovery process that identified AI validation as a key need, resulting in a 70-80% reduction in escalations through FlareGuard AI content workflow.",
-      "Led implementation of automated documentation pipelines, including Playwright screenshot automation and PDF generation, resolving a years-long customer complaint and improving deployment efficiency for developer-facing workflows.",
-      "Conducted readiness assessments for 200+ article help portal redesign, including repo/environment setup, permission configuration, and role-aware navigation, enabling seamless adoption across cross-functional teams.",
-      "Collaborated closely with Support and Engineering teams to capture product gaps and technical blockers, synthesizing feedback into actionable recommendations that improved SMS/MMS platform documentation.",
-      "Provided hands-on implementation support for Zendesk migration of 500+ articles with conditional content, including debugging, escalation triage, and configuration guidance, ensuring zero downtime.",
-      "Captured and synthesized workflow patterns and customer feedback from cross-functional partners, driving improvements to documentation pipelines and AI tool integration processes."
+      "Partnered with strategic enterprise customers to understand technical workflows and codebase environments, leading technical discovery sessions that identified implementation blockers and reduced escalations by 75%.",
+      "Provided hands-on implementation support for FlareGuard AI workflow tool, including setup guidance, debugging, and escalation triage, cutting support tickets by 80% across deployed accounts.",
+      "Collaborated cross-functionally with Customer Enablement, Solutions, and Engineering teams to capture and synthesize product gaps, bugs, and workflow patterns into actionable recommendations for product roadmaps.",
+      "Led technical readiness for a 200-article help portal migration, managing repository setup, permissions, and configuration in Git to ensure seamless adoption and role-aware navigation.",
+      "Automated documentation pipeline using Playwright and Git, enabling real-time UI screenshots and reducing manual screenshot generation time by 90%.",
+      "Built a custom PDF pipeline resolving a years-long customer complaint, demonstrating ability to navigate complex implementations and deliver high-impact technical solutions."
     ],
-    "cover_letter": "I build systems that make technical workflows faster and more reliable by eliminating friction between people, tools, and content. That\u2019s the job I\u2019ve been doing for years.\n\nAt Redwood, I built FlareGuard, a validation workflow that cut escalations by 70\u201380% and automated documentation pipelines end-to-end. I redesigned a 200-article help portal with role-aware navigation and solved a years-long customer complaint with a new PDF pipeline. At Attentive, I owned product docs for the SMS/MMS platform and partnered directly with Support and Engineering to align product changes with customer needs. I understand the loop between implementation, feedback, and shipping\u2014because I\u2019ve lived it.\n\nYour Forward Deployed Engineer role requires someone who can go into customer environments, do technical discovery, debug setups, and capture product gaps. I have done exactly that\u2014across codebases, help systems, and cross-functional teams. I can help your customers get Make Local working and turn their blockers into actionable feedback for your Product and Engineering teams. I\u2019d like to do that for Figma.",
+    "cover_letter": "I build systems that bridge technical complexity and real customer needs. That is the work I have done for seven years, and it is exactly what your Forward Deployed Engineer role demands.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70\u201380% and automated a documentation pipeline with Playwright screenshots. I redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that solved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles with conditional content and built an in-app help system from scratch. Every project required me to partner directly with Support and Engineering teams, lead technical discovery, and synthesize feedback into actionable improvements.\n\nYour posting asks for someone who can lead customer deployments, triage technical blockers, and capture product gaps for Engineering. I have done exactly that. I would welcome the conversation.",
     "short_answers": {
-      "Why this company?": "Figma's focus on developer-facing workflows and strategic customer partnerships aligns with my experience bridging technical implementation and customer needs. I'm excited to apply my AI workflow engineering background to help customers unlock value from Make Local and similar tools.",
-      "Tell us about yourself": "I'm Kara Novotny, an AI Workflow Engineer and Technical Writer with expertise in AI tool integration, technical documentation, and cross-functional collaboration. I've built automated content validation workflows that reduced escalations by 70-80%, redesigned large help portals, and led implementations that solved long-standing customer issues. I thrive on partnering with customers and teams to drive technical adoption and feedback loops."
+      "Why this company?": "Figma's focus on bridging developers and design through tools like Make Local excites me because it's exactly the kind of technical challenge I love\u2014helping customers overcome real workflow hurdles. I've spent my career partnering directly with users to diagnose blockers, implement fixes, and feed insights back to product teams, and I want to bring that hands-on approach to Figma's strategic accounts.",
+      "Tell us about yourself": "I'm an engineer who started in technical writing and evolved into building intelligent workflows that solve customer problems. At Redwood, I built an AI-powered validation tool that cut escalations by 75%, and at Bird I migrated 500+ articles while creating in-app help systems. My sweet spot is sitting at the intersection of customers, engineering, and product\u2014understanding their constraints, implementing practical solutions, and turning feedback into durable improvements."
     }
   }
 }

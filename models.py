@@ -37,6 +37,7 @@ class FitScore:
     breakdown: dict[str, int] = field(default_factory=dict)  # category -> score
     reasoning: str = ""
     red_flags: list[str] = field(default_factory=list)
+    recommendation: str = ""  # "Build" or "Skip"
 
 
 @dataclass

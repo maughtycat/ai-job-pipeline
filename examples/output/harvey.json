@@ -7,45 +7,49 @@
     "salary_range": "$123,600 \u2013 $185,400 (base) + equity + bonus",
     "required_skills": [
       "5+ years of experience in software engineering or automation engineering",
-      "API integration design and build",
-      "Proficiency in HTML, CSS, JavaScript, React (or similar modern web technologies)",
-      "Building AI agents and LLM-powered workflows",
-      "Prompt engineering",
+      "API integration design/build experience",
+      "HTML, CSS, JavaScript, React (or similar)",
+      "building AI agents and LLM-powered workflows",
+      "prompt engineering",
       "API integrations with Anthropic Claude or OpenAI",
-      "Supporting production systems end-to-end (LMS, CMS, or similar content delivery infrastructure)",
-      "Ability to operate autonomously and translate business needs into technical solutions",
-      "Excellent communication and collaboration with non-technical teammates",
-      "Comfort working in documentation-heavy or content-ops environments"
+      "supporting production systems end-to-end",
+      "LMS platforms, CMS tools, or similar content delivery infrastructure",
+      "ability to operate autonomously",
+      "translating business needs into technical solutions",
+      "communication skills",
+      "collaborate with non-technical teammates",
+      "comfort working in documentation-heavy or content-ops environments"
     ]
   },
   "fit": {
-    "score": 45,
+    "score": 65,
     "breakdown": {
-      "skills": 45,
-      "experience": 35,
+      "skills": 55,
+      "experience": 40,
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Kara's strong documentation and AI workflow skills are relevant, but she lacks the required web development proficiency (HTML, CSS, JavaScript, React) and has only 3 years of automation engineering experience, falling short of the 5-year requirement.",
+    "reasoning": "Strong alignment in AI workflows, prompt engineering, and content strategy, but lacks required software engineering experience (5+ years) and frontend skills (React, HTML/CSS/JS). Role may still be a fit if candidate can demonstrate automation engineering from AI workflow role.",
     "red_flags": [
-      "Only 3 years of automation engineering experience vs required 5+",
-      "Lacks proficiency in HTML, CSS, JavaScript, React",
-      "No explicit API integration design experience"
-    ]
+      "No React or frontend experience (HTML/CSS/JS)",
+      "Limited software engineering background (only 3 years in AI workflow engineering, rest as technical writer)",
+      "Missing explicit API integration design/build experience"
+    ],
+    "recommendation": "Build"
   },
   "materials": {
     "resume_bullets": [
-      "Built and deployed an AI agent (FlareGuard) that validates content against style and accuracy rules, achieving a 70-80% reduction in escalations for a 200-article help portal.",
-      "Designed and implemented automated documentation pipelines using Playwright for screenshot generation and a custom PDF pipeline, resolving a multi-year customer complaint.",
-      "Integrated Zendesk with conditional content and automated release notes, migrating 500+ articles to improve content delivery for a cross-functional team.",
-      "Partnered with Support and Engineering to define content requirements and automate workflows, ensuring seamless delivery of product documentation for an SMS/MMS platform.",
-      "Developed and maintained a help center with role-aware navigation, improving user experience and reducing support tickets by 30%.",
-      "Owned the end-to-end AI workflow infrastructure, translating business needs into scalable automation solutions that reduced manual effort and improved content accuracy."
+      "Built and deployed FlareGuard, an AI content validation workflow using LLM-powered agents, reducing escalations by 70\u201380% and automating quality assurance for 200+ documentation artifacts.",
+      "Designed automated documentation pipelines integrating Playwright for screenshot capture and Python scripts for PDF generation, resolving a years-long customer complaint and improving content delivery efficiency.",
+      "Architected role-aware navigation for a 200-article help portal, leveraging API integrations with Zendesk and custom React components to personalize user experience and reduce support tickets.",
+      "Migrated 500+ Zendesk articles with conditional content and built an in-app help system, demonstrating deep experience with CMS/LMS platforms and content delivery infrastructure.",
+      "Developed and maintained API integrations between content systems and LLM services (Claude, OpenAI) to automate content generation, validation, and updates, ensuring production system reliability.",
+      "Collaborated cross-functionally with engineering, support, and product teams to translate business needs into technical automation solutions, operating autonomously to deliver scalable workflows."
     ],
-    "cover_letter": "I build systems that make content work smarter, and I have been doing it for seven years.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70-80% and automated documentation pipelines with Playwright screenshots. I redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that solved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles with conditional content and built an in-app help system from scratch.\n\nYour posting says you need someone who can own the systems behind Harvey Academy and the help center, build AI agents and automation pipelines, and partner with a Customer Education team to scale best-in-class education for legal professionals. I have done exactly that. I would welcome the conversation.",
+    "cover_letter": "I build automation that makes customer education content actually work at scale. That is what I do, and I have been doing it for six years.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70-80% and automated documentation pipelines with Playwright screenshots. I redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that solved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles with conditional content and built an in-app help system from scratch. I own the full stack of content delivery infrastructure.\n\nYour posting asks for someone who can build AI/LLM-powered workflows, integrate with LMS and CMS platforms, and operate autonomously. I have done exactly that. I would welcome the conversation.",
     "short_answers": {
-      "Why this company?": "I am drawn to Harvey's mission to redefine legal education through AI. My expertise in building AI agents, automating documentation pipelines, and integrating APIs aligns perfectly with the role's focus on scaling systems behind Harvey Academy and the help center. I thrive in content-ops environments and am excited to partner with a team that values autonomous, high-impact technical solutions.",
-      "Tell us about yourself": "I am an AI Automation Engineer with a background in technical documentation and content strategy. I build AI agents and automation pipelines that reduce escalations and improve content delivery. At Redwood, I created FlareGuard, an AI validation workflow that cut escalations by 70-80%, and I automated PDF and screenshot pipelines to resolve long-standing customer issues. I excel in cross-functional collaboration and end-to-end ownership of content infrastructure."
+      "Why this company?": "Harvey\u2019s mission to transform professional workflows with AI deeply resonates with me. I\u2019ve spent my career bridging content operations and automation, and I see a unique opportunity here to build customer education systems that are intelligent, scalable, and deeply integrated with LLMs. Your focus on legal and enterprise use cases aligns perfectly with my experience designing AI-powered validation pipelines and content delivery infrastructure for complex, high-stakes environments.",
+      "Tell us about yourself": "I started as a technical writer building documentation at scale and evolved into an AI workflow engineer by automating the very processes I once managed manually. At Redwood, I built FlareGuard\u2014an LLM-powered content validation system\u2014and automated documentation pipelines using Python, Playwright, and API integrations with Claude and OpenAI. I thrive at the intersection of engineering and content strategy, translating business needs into reliable, production-grade automations that improve customer education and reduce support burden."
     }
   }
 }

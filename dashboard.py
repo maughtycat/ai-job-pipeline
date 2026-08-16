@@ -15,7 +15,6 @@ st.set_page_config(
     layout="wide",
 )
 
-# Load cached results
 CACHE_DIR = Path("examples/output")
 
 
@@ -32,7 +31,6 @@ def load_results():
 
 results = load_results()
 
-# Header
 st.title("AI Job Application Pipeline")
 st.caption(
     "An AI-powered tool that parses job postings, scores relevance, "
@@ -40,7 +38,6 @@ st.caption(
     "[GitHub](https://github.com/maughtycat/ai-job-pipeline)"
 )
 
-# Tabs
 tab_demo, tab_stats = st.tabs(["Pipeline Demo", "Application Stats"])
 
 with tab_demo:
@@ -53,9 +50,8 @@ with tab_demo:
     if not results:
         st.warning("No cached results found in examples/output/")
     else:
-        # Build selection options
         options = {
-            f"{r['posting']['company']} — {r['posting']['role']} (Score: {r['fit']['score']})": r
+            f"{r['posting']['company']} — {r['posting']['role']}": r
             for r in results
         }
         selected = st.selectbox("Select a job posting", list(options.keys()))
@@ -65,32 +61,40 @@ with tab_demo:
         fit = data["fit"]
         materials = data["materials"]
 
-        # Fit Score
+        # Recommendation banner
+        rec = fit.get("recommendation", "")
+        if rec == "Build":
+            st.success(f"**Recommendation: {rec}** — Worth applying")
+        elif rec == "Skip":
+            st.error(f"**Recommendation: {rec}** — Not a good fit")
+        else:
+            st.warning(f"**Recommendation: Borderline**")
+
         col1, col2 = st.columns([1, 2])
         with col1:
             score = fit["score"]
-            color = (
-                "green" if score >= 70 else "orange" if score >= 50 else "red"
-            )
             st.metric("Fit Score", f"{score}/100")
-            st.markdown(f":{color}[{fit['reasoning']}]")
+            st.markdown(f"*{fit['reasoning']}*")
 
             if fit.get("red_flags"):
-                st.subheader("Red Flags")
+                st.markdown("**Red Flags:**")
                 for flag in fit["red_flags"]:
-                    st.warning(flag)
+                    st.caption(f"⚠ {flag}")
 
         with col2:
-            # Posting details
-            st.subheader("Job Posting")
-            st.json(posting, expanded=False)
+            st.markdown("**Job Posting**")
+            st.caption(f"{posting.get('company', '')} — {posting.get('role', '')}")
+            st.caption(f"{posting.get('location', '')} ({posting.get('remote_type', '')})")
+            st.caption(f"Salary: {posting.get('salary_range', 'Not listed')}")
+            if posting.get("required_skills"):
+                st.caption(f"Required: {', '.join(posting['required_skills'][:5])}")
 
-            # Score breakdown
             if fit.get("breakdown"):
-                st.subheader("Score Breakdown")
-                st.bar_chart(fit["breakdown"])
+                st.markdown("**Score Breakdown:**")
+                cols = st.columns(4)
+                for i, (cat, val) in enumerate(fit["breakdown"].items()):
+                    cols[i].metric(cat.capitalize(), f"{val}/100")
 
-        # Generated Materials
         st.divider()
         st.subheader("Generated Materials")
 
@@ -116,52 +120,42 @@ with tab_stats:
         "Aggregated data from 279 tailored applications over 2.5 months."
     )
 
-    # Key metrics
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Total Applications", "279")
     col2.metric("Per Week", "25")
     col3.metric("Recruiter Screens", "10")
     col4.metric("HM Interviews", "8")
 
-    col5, col6, col7 = st.columns(3)
+    col5, col6 = st.columns(2)
     col5.metric("Recruiter → HM Rate", "80%")
     col6.metric("Avg Salary Range", "$118K–$165K")
-    col7.metric("Currently Interviewing", "1")
 
     st.divider()
 
-    # Score distribution from cached results
-    st.subheader("Fit Score Distribution (Sample)")
-    scores = [r["fit"]["score"] for r in results]
-    st.bar_chart({"Score": scores})
-
-    # Role mix
-    st.subheader("Applications by Role Type")
-    role_data = {"AI": 151, "Engineering": 134, "Technical Writer": 67}
-    st.bar_chart(role_data)
-
-    # Timeline
-    st.subheader("Applications Over Time")
-    timeline_data = {
-        "Month": ["June", "July", "August"],
-        "Applications": [112, 116, 51],
-    }
-    st.bar_chart(timeline_data)
-
-    # Pipeline funnels
     st.subheader("Pipeline Funnel")
-    funnel_data = {
-        "Stage": [
-            "Applied",
-            "Recruiter Screen",
-            "HM Interview",
-            "Deep Dive",
-        ],
-        "Count": [279, 10, 8, 1],
-    }
-    st.bar_chart(funnel_data)
+    funnel = [
+        {"Stage": "Applied", "Count": 279},
+        {"Stage": "Recruiter Screen", "Count": 10},
+        {"Stage": "HM Interview", "Count": 8},
+        {"Stage": "Deep Dive / Take-home", "Count": 1},
+    ]
+    st.dataframe(funnel, use_container_width=True, hide_index=True)
 
-# Footer
+    st.subheader("Applications by Month")
+    timeline = [
+        {"Month": "June 2026", "Applications": 112},
+        {"Month": "July 2026", "Applications": 116},
+        {"Month": "August 2026 (partial)", "Applications": 51},
+    ]
+    st.dataframe(timeline, use_container_width=True, hide_index=True)
+
+    st.subheader("Fit Scores (from demo)")
+    score_data = [
+        {"Company": r["posting"]["company"], "Score": r["fit"]["score"], "Recommendation": r["fit"].get("recommendation", "?")}
+        for r in results
+    ]
+    st.dataframe(score_data, use_container_width=True, hide_index=True)
+
 st.divider()
 st.caption(
     "Built by Kara Novotny | "

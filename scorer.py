@@ -5,6 +5,9 @@ from models import FitScore, JobPosting, Profile
 
 
 SYSTEM_PROMPT = """You evaluate how well a job posting matches a candidate's profile.
+Be realistic: many postings list preferred skills as "required." Weight actual skill
+overlap and experience relevance more heavily than checkbox requirements.
+
 Return valid JSON:
 {
   "score": 0-100,
@@ -15,9 +18,12 @@ Return valid JSON:
     "salary": 0-100
   },
   "reasoning": "1-2 sentence explanation",
-  "red_flags": ["list of concerns or dealbreakers"]
+  "red_flags": ["list of concerns or dealbreakers"],
+  "recommendation": "Build" or "Skip"
 }
-Be honest. A 70+ score means worth applying. Below 50 means skip."""
+70+ = Build (worth applying). 50-69 = Borderline (apply if interested). Below 50 = Skip.
+Be honest but not overly strict. A strong partial match is still a Build if the core
+skills align and the role is interesting."""
 
 
 def score_job(posting: JobPosting, profile: Profile) -> FitScore:
@@ -48,4 +54,5 @@ Experience: {posting.years_experience}
         breakdown=data.get("breakdown", {}),
         reasoning=data.get("reasoning", ""),
         red_flags=data.get("red_flags", []),
+        recommendation=data.get("recommendation", ""),
     )
