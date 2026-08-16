@@ -1,0 +1,35 @@
+{
+  "posting": {
+    "company": "MRO",
+    "role": "AI Solutions Architect",
+    "location": "Remote",
+    "remote_type": "remote",
+    "salary_range": "$106,000 \u2013 $144,000/year",
+    "required_skills": []
+  },
+  "fit": {
+    "score": 88,
+    "breakdown": {
+      "skills": 85,
+      "experience": 80,
+      "location": 100,
+      "salary": 95
+    },
+    "reasoning": "Kara's advanced AI integration, prompt engineering, and cross-functional collaboration skills align well with an AI Solutions Architect role, and her remote preference matches the job's remote location. Salary range covers her floor, and no dealbreakers are triggered.",
+    "red_flags": []
+  },
+  "materials": {
+    "resume_bullets": [
+      "Delivered white-glove AI enablement and consulting to business units: configured tools, trained teams, and set up workflows that reduced escalations 70-80%",
+      "Built bespoke AI workflows and agents, including FlareGuard content validation workflow, automating quality assurance and improving accuracy",
+      "Provided solution consulting: assessed team workflows, identified AI opportunities, and scoped/delivered improvements, including redesigning 200-article help portal with role-aware navigation",
+      "Developed full-stack lightweight internal tools, including automated documentation pipeline with Playwright screenshots and PDF pipeline solving a years-long customer complaint",
+      "Integrated AI tools with existing platforms (Zendesk, MadCap Flare) to streamline content delivery and support operations"
+    ],
+    "cover_letter": "I build AI workflows that ship, and I have been doing it for three years.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70\u201380%. I redesigned a 200-article help portal with role-aware navigation and automated the documentation pipeline using Playwright screenshots. I also solved a years-old customer complaint by building a PDF pipeline from scratch. At Attentive, I owned product documentation for the SMS/MMS platform, working cross-functionally with Support and Engineering to keep everything aligned.\n\nYour role asks for someone to deliver AI enablement, build bespoke workflows, and assess team needs to scope improvements. I have done exactly that\u2014consulting, building, and shipping across business units. I would welcome the conversation.",
+    "short_answers": {
+      "Why this company?": "MRO's focus on white-glove AI enablement aligns perfectly with my experience delivering bespoke AI workflows and consulting to diverse business units. I am excited to bring my expertise in tool setup, training, and ongoing support to help MRO teams leverage AI effectively, as demonstrated by my track record of reducing escalations by 70-80% through AI-driven solutions.",
+      "Tell us about yourself": "I am an AI Workflow Engineer with deep expertise in AI integration, technical documentation, and content strategy. At Redwood, I built AI workflows like FlareGuard that reduced escalations by 70-80%, and I have a proven ability to assess team needs and deliver tailored AI improvements. I excel at cross-functional collaboration and am passionate about enabling teams through AI."
+    }
+  }
+}

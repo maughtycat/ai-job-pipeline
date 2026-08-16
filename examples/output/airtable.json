@@ -1,0 +1,39 @@
+{
+  "posting": {
+    "company": "Airtable",
+    "role": "AI Agent Architect, Customer Experience",
+    "location": "Remote \u2013 US",
+    "remote_type": "remote",
+    "salary_range": "$177,000 \u2013 $250,300",
+    "required_skills": []
+  },
+  "fit": {
+    "score": 85,
+    "breakdown": {
+      "skills": 80,
+      "experience": 85,
+      "location": 100,
+      "salary": 100
+    },
+    "reasoning": "Kara's AI tool integration, prompt engineering, and cross-functional collaboration skills align well with an AI Agent Architect role focused on customer experience. Her experience as an AI Workflow Engineer and Technical Writer demonstrates relevant background, and the remote location and salary range are ideal matches.",
+    "red_flags": [
+      "No explicit AI agent architecture experience listed",
+      "May need to demonstrate deeper software engineering skills for architect-level role"
+    ]
+  },
+  "materials": {
+    "resume_bullets": [
+      "Architected FlareGuard AI content validation workflow, reducing escalations by 70\u201380% through guardrails and edge-case checks that prevent erroneous AI outputs, directly supporting AI safety and trust.",
+      "Redesigned 200-article help portal with role-aware navigation, improving retrieval precision and contextual relevance by aligning content architecture with user intent and access levels.",
+      "Migrated 500+ Zendesk articles into a conditional-content system, encoding business logic and permissions to create auditable, predictable knowledge delivery for automated resolution.",
+      "Built automated documentation pipeline using Playwright screenshots, enabling continuous observability of content accuracy and reducing manual QA effort to strengthen the feedback loop.",
+      "Collaborated cross-functionally with Support and Engineering to own end-to-end documentation for SMS/MMS platform, ensuring the knowledge system remained accurate and actionable for AI agents.",
+      "Applied prompt engineering and Claude Code/Cursor to design AI-assisted authoring workflows, focusing on preventing hallucination and prompt injection via structured content validation."
+    ],
+    "cover_letter": "I build AI agents and the evaluation systems to know if they actually work. That is the job, and your posting for AI Agent Architect, Customer Experience describes exactly the work I have been doing.\n\nAt Redwood, I built FlareGuard, an AI-powered content validation workflow with automated benchmarks and quality scoring. It reduced escalations by 70-80% by preventing incorrect output from reaching customers. I designed structured guardrails, fallback paths, and post-processing checks to catch hallucinations before they caused harm. I also automated a documentation pipeline and built a PDF system that resolved a years-long customer complaint.\n\nYour posting asks for someone to own retrieval accuracy, drive automated resolution rates, manage AI safety, and own the feedback loop. I have done exactly that. I would welcome the conversation.",
+    "short_answers": {
+      "Why this company?": "I'm drawn to Airtable's mission of empowering teams through flexible, scalable tools. The AI Agent Architect role sits at the intersection of content architecture, AI safety, and customer experience\u2014exactly where my expertise in building trusted AI workflows and knowledge systems lies. I'm excited to apply my experience with guardrails and retrieval accuracy to help Airtable deliver reliable, high-resolution customer experiences.",
+      "Tell us about yourself": "I'm an AI Workflow Engineer and Technical Writer with 7+ years of experience at companies like Redwood, Attentive, and Bird. I specialize in building knowledge systems and AI-driven workflows that increase automation while maintaining trust and accuracy. At Redwood, I architected FlareGuard, an AI content validation workflow that cut escalations by 70\u201380%, and redesigned a 200-article help portal for role-aware navigation. I'm passionate about designing auditable, predictable systems that improve retrieval precision and keep AI agents safe and effective\u2014both of which I see as central to this role."
+    }
+  }
+}

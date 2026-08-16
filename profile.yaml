@@ -1,0 +1,73 @@
+name: "Kara Novotny"
+title: "AI Workflow Engineer"
+
+skills:
+  - name: "Technical Documentation"
+    level: expert
+  - name: "AI Tool Integration"
+    level: advanced
+  - name: "Prompt Engineering"
+    level: advanced
+  - name: "Python"
+    level: intermediate
+  - name: "TypeScript"
+    level: beginner
+  - name: "MadCap Flare"
+    level: expert
+  - name: "Content Strategy"
+    level: expert
+  - name: "Cross-functional Collaboration"
+    level: expert
+  - name: "Zendesk"
+    level: advanced
+  - name: "Git"
+    level: intermediate
+  - name: "Claude Code / Cursor"
+    level: advanced
+
+experience:
+  - company: "Redwood"
+    role: "Technical Writer & AI Workflow Engineer"
+    years: 3
+    highlights:
+      - "Built FlareGuard AI content validation workflow, escalations dropped 70-80%"
+      - "Redesigned 200-article help portal with role-aware navigation"
+      - "Automated documentation pipeline with Playwright screenshots"
+      - "Built PDF pipeline solving a years-long customer complaint"
+  - company: "Attentive"
+    role: "Senior Technical Writer"
+    years: 2
+    highlights:
+      - "Owned product documentation for SMS/MMS platform"
+      - "Cross-functional partnership with Support and Engineering"
+  - company: "Bird"
+    role: "Technical Writer"
+    years: 2
+    highlights:
+      - "Migrated 500+ Zendesk articles with conditional content"
+      - "Built in-app help system and release notes pipeline"
+
+preferences:
+  remote: preferred
+  salary_floor: 100000
+  location: "Remote (US)"
+
+dealbreakers:
+  - "Requires 8+ years SWE experience"
+  - "Requires CS degree"
+  - "Onsite only, not in remote-friendly locations"
+
+reference_tone: |
+  I build AI agents and the evaluation systems to know if they actually work.
+  That is the job, and I have been doing it for seven years.
+
+  At Redwood, I built FlareGuard, an AI-powered content quality suite with
+  automated benchmarks, quality scoring, and regression detection that prevented
+  incorrect output from reaching production. I investigated agent failures and
+  developed systematic approaches: structured guardrails, fallback paths, and
+  post-processing guards that detect and prevent hallucination.
+
+  Your posting says you need someone who can build LLM-powered features, design
+  evaluation frameworks, investigate agent failures, and experiment with prompting,
+  tool use, retrieval, and planning strategies. I have done exactly that. I would
+  welcome the conversation.

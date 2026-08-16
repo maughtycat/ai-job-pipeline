@@ -1,0 +1,41 @@
+{
+  "posting": {
+    "company": "Figma",
+    "role": "Forward Deployed Engineer",
+    "location": "",
+    "remote_type": "",
+    "salary_range": "",
+    "required_skills": []
+  },
+  "fit": {
+    "score": 25,
+    "breakdown": {
+      "skills": 20,
+      "experience": 15,
+      "location": 30,
+      "salary": 50
+    },
+    "reasoning": "Kara's background as a technical writer and AI workflow engineer does not match the typical Forward Deployed Engineer role, which requires strong software engineering and deployment skills. The job posting lacks details, but the role likely demands advanced coding and CS fundamentals that Kara does not possess.",
+    "red_flags": [
+      "No software engineering experience (candidate's dealbreaker: requires 8+ years SWE experience)",
+      "No CS degree (candidate's dealbreaker)",
+      "Likely onsite/hybrid requirement (Figma's typical policy) conflicts with remote preference",
+      "Skills mismatch: Forward Deployed Engineer expects full-stack or systems engineering, not documentation/AI integration"
+    ]
+  },
+  "materials": {
+    "resume_bullets": [
+      "Partnered directly with strategic customer support teams to understand workflow bottlenecks, leading a technical discovery process that identified AI validation as a key need, resulting in a 70-80% reduction in escalations through FlareGuard AI content workflow.",
+      "Led implementation of automated documentation pipelines, including Playwright screenshot automation and PDF generation, resolving a years-long customer complaint and improving deployment efficiency for developer-facing workflows.",
+      "Conducted readiness assessments for 200+ article help portal redesign, including repo/environment setup, permission configuration, and role-aware navigation, enabling seamless adoption across cross-functional teams.",
+      "Collaborated closely with Support and Engineering teams to capture product gaps and technical blockers, synthesizing feedback into actionable recommendations that improved SMS/MMS platform documentation.",
+      "Provided hands-on implementation support for Zendesk migration of 500+ articles with conditional content, including debugging, escalation triage, and configuration guidance, ensuring zero downtime.",
+      "Captured and synthesized workflow patterns and customer feedback from cross-functional partners, driving improvements to documentation pipelines and AI tool integration processes."
+    ],
+    "cover_letter": "I build systems that make technical workflows faster and more reliable by eliminating friction between people, tools, and content. That\u2019s the job I\u2019ve been doing for years.\n\nAt Redwood, I built FlareGuard, a validation workflow that cut escalations by 70\u201380% and automated documentation pipelines end-to-end. I redesigned a 200-article help portal with role-aware navigation and solved a years-long customer complaint with a new PDF pipeline. At Attentive, I owned product docs for the SMS/MMS platform and partnered directly with Support and Engineering to align product changes with customer needs. I understand the loop between implementation, feedback, and shipping\u2014because I\u2019ve lived it.\n\nYour Forward Deployed Engineer role requires someone who can go into customer environments, do technical discovery, debug setups, and capture product gaps. I have done exactly that\u2014across codebases, help systems, and cross-functional teams. I can help your customers get Make Local working and turn their blockers into actionable feedback for your Product and Engineering teams. I\u2019d like to do that for Figma.",
+    "short_answers": {
+      "Why this company?": "Figma's focus on developer-facing workflows and strategic customer partnerships aligns with my experience bridging technical implementation and customer needs. I'm excited to apply my AI workflow engineering background to help customers unlock value from Make Local and similar tools.",
+      "Tell us about yourself": "I'm Kara Novotny, an AI Workflow Engineer and Technical Writer with expertise in AI tool integration, technical documentation, and cross-functional collaboration. I've built automated content validation workflows that reduced escalations by 70-80%, redesigned large help portals, and led implementations that solved long-standing customer issues. I thrive on partnering with customers and teams to drive technical adoption and feedback loops."
+    }
+  }
+}
