@@ -130,15 +130,12 @@ with tab_stats:
         "Aggregated data from 279 tailored applications over 2.5 months."
     )
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Total Applications", "279")
     col2.metric("Per Week", "25")
     col3.metric("Recruiter Screens", "10")
     col4.metric("HM Interviews", "8")
-
-    col5, col6 = st.columns(2)
     col5.metric("Recruiter to HM Rate", "80%")
-    col6.metric("Avg Salary Range", "$118K-$165K")
 
     st.divider()
 
