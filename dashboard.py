@@ -85,7 +85,7 @@ with tab_demo:
             st.write(f"**{posting.get('company', '')}** — {posting.get('role', '')}")
             st.write(f"Location: {posting.get('location', '')} ({posting.get('remote_type', '')})")
             salary = posting.get('salary_range', 'Not listed')
-            st.markdown(f"Salary (USD): `{salary}`")
+            st.markdown(f"Salary (USD): {salary}")
             if posting.get("required_skills"):
                 st.write(f"Required: {', '.join(posting['required_skills'][:5])}")
 

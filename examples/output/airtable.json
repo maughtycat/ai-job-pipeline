@@ -4,7 +4,7 @@
     "role": "AI Agent Architect, Customer Experience",
     "location": "Remote \u2013 US",
     "remote_type": "remote",
-    "salary_range": "$177,000 \u2013 $250,300 USD",
+    "salary_range": "177,000 \u2013 250,300 USD",
     "required_skills": [
       "LLM Expertise (RAG, prompt engineering, chain-of-thought, agent frameworks)",
       "Systems Thinking (data flows, state management, error handling)",
