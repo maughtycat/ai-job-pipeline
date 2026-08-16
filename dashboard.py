@@ -60,7 +60,13 @@ with tab_demo:
         fit = data["fit"]
         materials = data["materials"]
 
-        # Recommendation banner
+        # Outcome badge
+        outcome = fit.get("outcome", "")
+        if outcome:
+            if "HM" in outcome or "Take-home" in outcome or "Deep dive" in outcome:
+                st.success(f"**Actual Outcome:** {outcome}")
+            else:
+                st.info(f"**Actual Outcome:** {outcome}")
         rec = fit.get("recommendation", "")
         if rec == "Build":
             st.success(f"**Recommendation: {rec}** — Worth applying")
