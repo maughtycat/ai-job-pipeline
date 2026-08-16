@@ -6,7 +6,7 @@ Built and used during my own job search: 279 tailored applications, 25 per week,
 
 ## Live Demo
 
-[Try the dashboard](https://ai-job-pipeline-kn.streamlit.app/) — browse pre-canned pipeline results and application stats. No API key needed.
+[Try the dashboard](https://ai-job-pipeline-kn.streamlit.app/) — browse sample pipeline results and application stats. No API key needed.
 
 ## Quick Start
 
