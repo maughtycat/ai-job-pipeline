@@ -84,15 +84,10 @@ with tab_demo:
             st.markdown("**Job Posting**")
             st.write(f"**{posting.get('company', '')}** — {posting.get('role', '')}")
             st.write(f"Location: {posting.get('location', '')} ({posting.get('remote_type', '')})")
-            st.write(f"Salary: {posting.get('salary_range', 'Not listed')}")
+            salary = posting.get('salary_range', 'Not listed')
+            st.markdown(f"Salary (USD): `{salary}`")
             if posting.get("required_skills"):
                 st.write(f"Required: {', '.join(posting['required_skills'][:5])}")
-
-            if fit.get("breakdown"):
-                st.markdown("**Score Breakdown:**")
-                cols = st.columns(4)
-                for i, (cat, val) in enumerate(fit["breakdown"].items()):
-                    cols[i].metric(cat.capitalize(), f"{val}/100")
 
         # Key Terms — what drove the scoring
         if fit.get("key_terms"):
