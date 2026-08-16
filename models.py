@@ -38,6 +38,7 @@ class FitScore:
     reasoning: str = ""
     red_flags: list[str] = field(default_factory=list)
     recommendation: str = ""  # "Build" or "Skip"
+    key_terms: list[str] = field(default_factory=list)  # terms that drove the scoring
 
 
 @dataclass

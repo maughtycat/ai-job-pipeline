@@ -5,38 +5,58 @@
     "location": "",
     "remote_type": "",
     "salary_range": "",
-    "required_skills": []
+    "required_skills": [
+      "engineering",
+      "product knowledge",
+      "customer-facing skills",
+      "technical environment understanding",
+      "implementation support",
+      "debugging",
+      "technical discovery",
+      "codebase environments",
+      "permissions and configuration",
+      "developer workflows"
+    ]
   },
   "fit": {
     "score": 35,
     "breakdown": {
       "skills": 30,
-      "experience": 40,
+      "experience": 25,
       "location": 50,
       "salary": 50
     },
-    "reasoning": "The role is a Forward Deployed Engineer, which typically requires strong software engineering skills, but Kara's background is in technical writing and AI workflow engineering with only intermediate Python. Core engineering skills are missing, and the posting likely expects 8+ years of SWE experience, which is a dealbreaker.",
+    "reasoning": "The candidate's background in technical writing and AI workflow integration lacks the deep engineering, debugging, and codebase environment skills required for a Forward Deployed Engineer role.",
     "red_flags": [
-      "Role likely requires strong software engineering (SWE) experience, not just technical writing/AI workflow",
-      "Candidate's dealbreaker: requires 8+ years SWE experience",
-      "Candidate's dealbreaker: requires CS degree",
-      "No salary or location info provided, but remote is preferred and unclear if this role is remote-friendly"
+      "Limited software engineering experience",
+      "No demonstrated debugging or implementation support skills",
+      "Role typically requires stronger engineering background"
     ],
-    "recommendation": "Skip"
+    "recommendation": "Skip",
+    "key_terms": [
+      "engineering",
+      "customer-facing skills",
+      "implementation support",
+      "debugging",
+      "technical discovery",
+      "codebase environments",
+      "developer workflows",
+      "product knowledge"
+    ]
   },
   "materials": {
     "resume_bullets": [
-      "Partnered with strategic enterprise customers to understand technical workflows and codebase environments, leading technical discovery sessions that identified implementation blockers and reduced escalations by 75%.",
-      "Provided hands-on implementation support for FlareGuard AI workflow tool, including setup guidance, debugging, and escalation triage, cutting support tickets by 80% across deployed accounts.",
-      "Collaborated cross-functionally with Customer Enablement, Solutions, and Engineering teams to capture and synthesize product gaps, bugs, and workflow patterns into actionable recommendations for product roadmaps.",
-      "Led technical readiness for a 200-article help portal migration, managing repository setup, permissions, and configuration in Git to ensure seamless adoption and role-aware navigation.",
-      "Automated documentation pipeline using Playwright and Git, enabling real-time UI screenshots and reducing manual screenshot generation time by 90%.",
-      "Built a custom PDF pipeline resolving a years-long customer complaint, demonstrating ability to navigate complex implementations and deliver high-impact technical solutions."
+      "Partnered with Engineering, Support, and Sales teams to diagnose and resolve escalations, reducing critical issues by 70\u201380% through an AI-driven content validation workflow (FlareGuard).",
+      "Led technical discovery sessions with internal and external stakeholders to assess codebase environments, permissions, and configuration needs, resulting in a redesigned 200-article help portal with role-aware navigation.",
+      "Provided hands-on implementation support for developer-facing documentation pipelines, debugging Python and Git integration issues to automate Playwright screenshot generation and PDF output\u2014resolving a years-long customer complaint.",
+      "Captured and synthesized product gaps, technical blockers, and workflow patterns from customer feedback, delivering actionable insights to Product and Engineering teams that influenced roadmap priorities.",
+      "Collaborated cross-functionally with Customer Enablement Managers and Solutions Consultants to align implementation strategies with customer technical goals and adoption blockers.",
+      "Developed and maintained in-app help systems and release notes pipelines, enabling self-service troubleshooting and reducing dependency on support for common developer workflow questions."
     ],
-    "cover_letter": "I build systems that bridge technical complexity and real customer needs. That is the work I have done for seven years, and it is exactly what your Forward Deployed Engineer role demands.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70\u201380% and automated a documentation pipeline with Playwright screenshots. I redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that solved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles with conditional content and built an in-app help system from scratch. Every project required me to partner directly with Support and Engineering teams, lead technical discovery, and synthesize feedback into actionable improvements.\n\nYour posting asks for someone who can lead customer deployments, triage technical blockers, and capture product gaps for Engineering. I have done exactly that. I would welcome the conversation.",
+    "cover_letter": "I have spent my career building AI workflows and then sitting with the customers who rely on them. When I saw the Forward Deployed Engineer role at Figma, it matched the work I have been doing for seven years: understanding technical environments, leading setup and configuration, and debugging issues in real time.\n\nAt Redwood, I built FlareGuard, an AI content validation suite that cut escalations by 70-80%. I redesigned a 200-article help portal with role-aware navigation and automated a PDF pipeline that finally resolved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles and built an in-app help system that shipped every release.\n\nI do the hands-on work of deployment, discovery, and cross-functional coordination. Your customers need someone who can map their workflows, identify blockers, and get them running on Make Local without friction. That is exactly what I do. I would welcome the conversation.",
     "short_answers": {
-      "Why this company?": "Figma's focus on bridging developers and design through tools like Make Local excites me because it's exactly the kind of technical challenge I love\u2014helping customers overcome real workflow hurdles. I've spent my career partnering directly with users to diagnose blockers, implement fixes, and feed insights back to product teams, and I want to bring that hands-on approach to Figma's strategic accounts.",
-      "Tell us about yourself": "I'm an engineer who started in technical writing and evolved into building intelligent workflows that solve customer problems. At Redwood, I built an AI-powered validation tool that cut escalations by 75%, and at Bird I migrated 500+ articles while creating in-app help systems. My sweet spot is sitting at the intersection of customers, engineering, and product\u2014understanding their constraints, implementing practical solutions, and turning feedback into durable improvements."
+      "Why Figma?": "I'm drawn to Figma's commitment to bridging design and engineering through tools like Make Local. My experience building AI-driven workflows to simplify complex technical environments aligns perfectly with enabling customers to adopt Figma's developer-facing features. I've seen how impactful clear implementation support and debugging guidance can be, and I'm excited to bring that expertise to Figma's strategic customer deployments.",
+      "Tell us about yourself": "I'm an AI Workflow Engineer with a strong foundation in technical documentation and customer-facing problem-solving. At Redwood, I built FlareGuard, an AI content validation system that cut escalations by 70\u201380% by automatically detecting documentation bugs. I thrive at the intersection of engineering and customer success\u2014leading technical discovery, debugging codebase environments, and synthesizing feedback to improve developer workflows. I'm looking to apply that blend of technical depth and customer empathy to Figma's Forward Deployed Engineering team."
     }
   }
 }

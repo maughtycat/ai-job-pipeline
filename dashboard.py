@@ -67,7 +67,7 @@ with tab_demo:
         elif rec == "Skip":
             st.error(f"**Recommendation: {rec}** — Not a good fit")
         else:
-            st.warning(f"**Recommendation: Borderline**")
+            st.warning("**Recommendation: Borderline**")
 
         col1, col2 = st.columns([1, 2])
         with col1:
@@ -78,21 +78,37 @@ with tab_demo:
             if fit.get("red_flags"):
                 st.markdown("**Red Flags:**")
                 for flag in fit["red_flags"]:
-                    st.caption(f"⚠ {flag}")
+                    st.caption(f"Warning: {flag}")
 
         with col2:
             st.markdown("**Job Posting**")
-            st.caption(f"{posting.get('company', '')} — {posting.get('role', '')}")
-            st.caption(f"{posting.get('location', '')} ({posting.get('remote_type', '')})")
-            st.caption(f"Salary: {posting.get('salary_range', 'Not listed')}")
+            st.write(f"**{posting.get('company', '')}** — {posting.get('role', '')}")
+            st.write(f"Location: {posting.get('location', '')} ({posting.get('remote_type', '')})")
+            st.write(f"Salary: {posting.get('salary_range', 'Not listed')}")
             if posting.get("required_skills"):
-                st.caption(f"Required: {', '.join(posting['required_skills'][:5])}")
+                st.write(f"Required: {', '.join(posting['required_skills'][:5])}")
 
             if fit.get("breakdown"):
                 st.markdown("**Score Breakdown:**")
                 cols = st.columns(4)
                 for i, (cat, val) in enumerate(fit["breakdown"].items()):
                     cols[i].metric(cat.capitalize(), f"{val}/100")
+
+        # Key Terms — what drove the scoring
+        if fit.get("key_terms"):
+            st.markdown("**Key Terms (from posting):**")
+            term_html = " ".join(
+                f'<span style="background: #1f4e79; color: white; padding: 2px 8px; '
+                f'border-radius: 4px; font-size: 13px; margin: 2px;">{t}</span>'
+                for t in fit["key_terms"]
+            )
+            st.markdown(term_html, unsafe_allow_html=True)
+
+        # Expandable raw job posting text
+        raw_text = posting.get("raw_text", "")
+        if raw_text:
+            with st.expander("View full job posting text"):
+                st.text(raw_text)
 
         st.divider()
         st.subheader("Generated Materials")
@@ -126,8 +142,8 @@ with tab_stats:
     col4.metric("HM Interviews", "8")
 
     col5, col6 = st.columns(2)
-    col5.metric("Recruiter → HM Rate", "80%")
-    col6.metric("Avg Salary Range", "$118K–$165K")
+    col5.metric("Recruiter to HM Rate", "80%")
+    col6.metric("Avg Salary Range", "$118K-$165K")
 
     st.divider()
 
@@ -150,7 +166,7 @@ with tab_stats:
 
     st.subheader("Fit Scores (from demo)")
     score_data = [
-        {"Company": r["posting"]["company"], "Score": r["fit"]["score"], "Recommendation": r["fit"].get("recommendation", "?")}
+        {"Company": r["posting"]["company"], "Score": r["fit"]["score"], "Recommendation": r["fit"].get("recommendation", "")}
         for r in results
     ]
     st.dataframe(score_data, use_container_width=True, hide_index=True)

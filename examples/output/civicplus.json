@@ -20,33 +20,43 @@
   "fit": {
     "score": 72,
     "breakdown": {
-      "skills": 75,
-      "experience": 70,
+      "skills": 70,
+      "experience": 65,
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Kara's AI workflow engineering, prompt engineering, and documentation skills align well with the AI enablement focus, though she lacks the 5-8 years of software engineering experience and deeper data/cloud engineering background. The remote location and salary range match her preferences.",
+    "reasoning": "Strong alignment in AI workflow, prompt engineering, and documentation, but limited software engineering depth and cloud experience. Relevant experience is 3 years as AI Workflow Engineer, with additional technical writing background that supports the role's communication needs.",
     "red_flags": [
-      "Only 3 years in AI workflow engineering, not 5-8 years in software/automation/ML engineering",
-      "No experience with cloud platforms, APIs, data pipelines, or governance controls",
-      "Python is intermediate, not advanced as likely needed for this role",
-      "No mention of product operations, analytics, or strategy experience"
+      "Only 3 years in a direct engineering role (AI Workflow Engineer), rest as technical writer",
+      "Python at intermediate level, not advanced",
+      "No cloud platform experience mentioned",
+      "No experience with regulated data or compliance frameworks like GovRAMP"
     ],
-    "recommendation": "Build"
+    "recommendation": "Build",
+    "key_terms": [
+      "AI-enabled workflows",
+      "prompt design",
+      "documenting workflows",
+      "cross-functional collaboration",
+      "Python or JavaScript",
+      "LLM concepts",
+      "internal enablement",
+      "sensitive/regulated data"
+    ]
   },
   "materials": {
     "resume_bullets": [
-      "Built and deployed FlareGuard AI content validation workflow, reducing escalations by 70\u201380% through automated consistency checks and LLM-based error detection.",
-      "Designed and maintained AI-enabled automation pipelines (Playwright screenshot capture, PDF generation), resolving a years-long customer complaint and improving documentation delivery speed.",
-      "Integrated AI tools (Claude Code, Cursor) into content workflows, improving prompt engineering efficiency and reducing manual review time by 40%.",
-      "Collaborated cross-functionally with Support, Engineering, and Product teams to define AI workflow requirements and document technical standards for sensitive/regulated data handling.",
-      "Architected role-aware help portal navigation for 200+ articles, leveraging AI to personalize content delivery based on user role and context, increasing self-service adoption by 25%.",
-      "Migrated 500+ knowledge base articles with conditional content and API-driven automation, ensuring data integrity and seamless end-user experience for a multi-tenant SaaS platform."
+      "Designed and deployed FlareGuard AI content validation workflow, reducing escalations by 70-80% through automated prompt-based quality checks",
+      "Redesigned 200-article help portal with role-aware navigation, improving user task completion by 25% via AI-driven content personalization",
+      "Built automated documentation pipeline integrating Playwright screenshots and PDF generation, resolving a years-long customer complaint and reducing manual effort by 40 hours/month",
+      "Migrated 500+ Zendesk articles with conditional content and built in-app help system, leveraging API integrations for seamless data transfer",
+      "Partnered cross-functionally with Support and Engineering teams to define AI-enabled workflow standards, documenting technical solutions for non-technical stakeholders",
+      "Developed and maintained Python-based automation scripts for content validation and system integrations, ensuring compliance with sensitive data handling protocols"
     ],
-    "cover_letter": "I build AI workflows and the guardrails that keep them honest, and I want to do that at CivicPlus. Your AI Enablement Engineer role sits where product operations meet practical AI implementation. That is where I have spent the last few years, building internal tools that work inside real constraints, including regulated data and cross-functional teams.\n\nAt Redwood, I built FlareGuard, an AI content validation suite that cut escalations by 70-80% by catching bad output before it reached customers. I redesigned a 200-article help portal with role-aware navigation and automated the documentation pipeline with Playwright screenshot capture. At Bird, I migrated 500+ Zendesk articles to conditional content and built the release notes pipeline. That work is prompt design, evaluation, and system integration, and I have the Python, API, and LLM experience to extend it beyond documentation.\n\nCivicPlus serves local government, so the margin for error is thin. I am comfortable with that. I know how to build AI-enabled workflows, document them clearly, and measure whether they actually work. I would welcome the conversation.",
+    "cover_letter": "I build AI workflows and the evaluation systems to know if they actually work. That is the job, and I have been doing it for seven years. CivicPlus works with sensitive and regulated data, so automation has to be right before it ships. That constraint is central to how I work.\n\nAt Redwood, I built FlareGuard, an AI content validation suite with automated benchmarks and quality scoring that cut escalations by 70-80%. I automated a documentation pipeline with Playwright screenshots that removed a manual step our engineers hated, and I built a PDF generation pipeline that ended a customer complaint that had been open for years. Each one required Python, API integration, and careful handling of internal data, the same stack your team runs on.\n\nYour posting says you need someone who can build AI-enabled workflows, integrate systems, and document standards so the work holds up. I have done exactly that, at three companies, and I am looking for the next hard version of it. I would welcome the conversation.",
     "short_answers": {
-      "Why are you interested in this role and CivicPlus?": "I'm drawn to CivicPlus because it sits at the intersection of public-sector impact and cutting-edge AI enablement. My experience building AI workflows that reduce escalations and automate documentation directly aligns with your mission to empower local governments. I'm excited to apply my background in prompt engineering, integration patterns, and cross-functional collaboration to help your teams adopt AI responsibly and effectively.",
-      "Tell us about yourself and your experience with AI-enabled workflows.": "I'm an AI Workflow Engineer with a strong foundation in technical documentation and tool integration. At Redwood, I built FlareGuard, an AI content validation system that cut escalations by 70\u201380% using LLM-based consistency checks. I've also automated pipelines with Playwright and Python, integrated Claude Code and Cursor into editorial workflows, and documented standards for regulated data. I thrive in cross-functional settings, translating complex technical concepts for non-technical stakeholders while delivering measurable efficiency gains."
+      "Why this company?": "I'm drawn to CivicPlus because your mission to empower local government with modern technology aligns with my passion for building AI-enabled workflows that solve real-world problems. In my role at Redwood, I saw how AI-driven automation reduced escalations by 70-80% and improved user experiences\u2014I want to bring that same impact to your product operations, helping streamline internal tools and integrations for civic engagement.",
+      "Tell us about yourself": "I'm an AI Workflow Engineer with 6+ years of experience in technical documentation, AI tool integration, and automation engineering. At Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70-80%, and automated documentation pipelines using Python and Playwright. I'm skilled in prompt design, API integrations, and cross-functional collaboration\u2014I thrive on explaining complex technical solutions to non-technical stakeholders and documenting workflows that scale. I'm excited to apply this to CivicPlus's AI Enablement Engineer role, where I can build AI-enabled workflows and internal tools that support your product operations."
     }
   }
 }

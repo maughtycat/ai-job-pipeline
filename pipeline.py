@@ -68,6 +68,7 @@ def cmd_analyze(args):
             "reasoning": fit.reasoning,
             "red_flags": fit.red_flags,
             "recommendation": fit.recommendation,
+            "key_terms": fit.key_terms,
         },
         "materials": {
             "resume_bullets": materials.resume_bullets,

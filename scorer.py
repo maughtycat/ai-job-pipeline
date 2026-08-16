@@ -19,11 +19,12 @@ Return valid JSON:
   },
   "reasoning": "1-2 sentence explanation",
   "red_flags": ["list of concerns or dealbreakers"],
-  "recommendation": "Build" or "Skip"
+  "recommendation": "Build" or "Skip",
+  "key_terms": ["5-8 specific terms from the posting that influenced scoring"]
 }
-70+ = Build (worth applying). 50-69 = Borderline (apply if interested). Below 50 = Skip.
-Be honest but not overly strict. A strong partial match is still a Build if the core
-skills align and the role is interesting."""
+70+ = Build. 50-69 = Borderline. Below 50 = Skip.
+key_terms should be actual phrases from the posting like AI agents, prompt engineering,
+cross-functional collaboration — not generic words like experience."""
 
 
 def score_job(posting: JobPosting, profile: Profile) -> FitScore:
@@ -55,4 +56,5 @@ Experience: {posting.years_experience}
         reasoning=data.get("reasoning", ""),
         red_flags=data.get("red_flags", []),
         recommendation=data.get("recommendation", ""),
+        key_terms=data.get("key_terms", []),
     )
