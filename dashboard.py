@@ -78,7 +78,7 @@ with tab_demo:
             if fit.get("red_flags"):
                 st.markdown("**Red Flags:**")
                 for flag in fit["red_flags"]:
-                    st.caption(f"Warning: {flag}")
+                    st.warning(flag)
 
         with col2:
             st.markdown("**Job Posting**")

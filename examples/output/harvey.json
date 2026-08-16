@@ -4,7 +4,7 @@
     "role": "AI Automation Engineer, Customer Education",
     "location": "Remote",
     "remote_type": "remote",
-    "salary_range": "$123,600 \u2013 $185,400",
+    "salary_range": "$123,600 \u2013 $185,400 (base) + equity + bonus",
     "required_skills": [
       "5+ years of experience in software engineering or automation engineering with demonstrated API integration design/build experience",
       "Proficiency with modern web technologies: HTML, CSS, JavaScript, React (or similar)",
@@ -13,48 +13,61 @@
       "Strong ability to operate autonomously, translating business needs into well-architected technical solutions with minimal oversight",
       "Excellent communication skills; ability to collaborate with non-technical teammates and explain technical tradeoffs clearly",
       "Comfort working in documentation-heavy or content-ops environments"
-    ]
+    ],
+    "preferred_skills": [
+      "Familiarity with content governance or audit systems, including automated review triggers and freshness logic",
+      "Experience building and operating AI video generation pipelines (e.g., ElevenLabs or equivalent)",
+      "Experience coding interactive elements within LMS platforms"
+    ],
+    "years_experience": "5+ years",
+    "responsibilities": [
+      "Build and maintain AI agents using LLM APIs (Anthropic Claude, OpenAI) to automate content creation, review, and publishing workflows across Harvey Academy and the help center.",
+      "Own and optimize the learning technology stack, including Skilljar and Sanity CMS integrations, ensuring reliability, extensibility, and seamless content publishing.",
+      "Identify and eliminate bottlenecks in content operations by building automation where it doesn't exist yet.",
+      "Partner with Product, User Operations, and GTM to identify opportunities for systems improvement and AI-driven innovation across the customer education ecosystem.",
+      "Use technical expertise to explore implementation of interactive learning components based on instructional design direction from cross-functional partners."
+    ],
+    "application_questions": [],
+    "raw_text": "AI Automation Engineer, Customer Education \u2014 Harvey\nhttps://jobs.ashbyhq.com/harvey/1bb028d2-168e-475b-9f0d-f994daca596d?utm_source=58AzKxpoq0\n\nPosition: AI Automation Engineer, Customer Education\nCompany: Harvey\nLocation: Remote\nEmployment Type: Full-time\nDepartment: User Operations\n\nSalary Range: $123,600 \u2013 $185,400 (base) + equity + bonus\nBenefits: Comprehensive health/dental/vision, 401k match up to 4%, flexible PTO\n\nRequired Qualifications:\n- 5+ years of experience in software engineering or automation engineering with demonstrated API integration design/build experience\n- Proficiency with modern web technologies: HTML, CSS, JavaScript, React (or similar)\n- Hands-on experience building AI agents and LLM-powered workflows, including prompt engineering and API integrations with Anthropic Claude or OpenAI\n- Track record of supporting production systems end-to-end, ideally including LMS platforms, CMS tools, or similar content delivery infrastructure\n- Strong ability to operate autonomously, translating business needs into well-architected technical solutions with minimal oversight\n- Excellent communication skills; ability to collaborate with non-technical teammates and explain technical tradeoffs clearly\n- Comfort working in documentation-heavy or content-ops environments\n\nPreferred Qualifications:\n- Familiarity with content governance or audit systems, including automated review triggers and freshness logic\n- Experience building and operating AI video generation pipelines (e.g., ElevenLabs or equivalent)\n- Experience coding interactive elements within LMS platforms\n\nRole Overview\n\nHarvey's Customer Education team is defining what best-in-class AI education looks like for legal professionals, and we're building the technical infrastructure to make that possible at scale. We are looking for an Automation Engineer to own the systems behind Harvey Academy and the help center, from AI agents and automation pipelines to video content and beyond.\n\nYou will partner directly with the Customer Education Strategist Lead, content specialists, and cross-functional teams to translate educational strategy into production-grade technical solutions. This is a high-autonomy role with direct ownership of systems that shape the customer experience at a category-defining legal AI company.\n\nThis is a rare opportunity to be the technical mind embedded within a high-performing, strategy-driven team. You'll be the person who looks at a manual, time-intensive content operation and replaces it with something smarter, faster, and scalable.\n\nAI-powered content generation, automated publishing pipelines, and personalized learning at scale are challenges the industry is still figuring out. The solutions you build will directly determine how quickly Harvey's customers become experts on the platform. If you're an engineer who wants outsized influence, a short path from idea to impact, and the chance to help define what generative AI education looks like, this is that role.\n\nWhat You'll Do\n- Build and maintain AI agents using LLM APIs (Anthropic Claude, OpenAI) to automate content creation, review, and publishing workflows across Harvey Academy and the help center.\n- Own and optimize the learning technology stack, including Skilljar and Sanity CMS integrations, ensuring reliability, extensibility, and seamless content publishing.\n- Identify and eliminate bottlenecks in content operations by building automation where it doesn't exist yet.\n- Partner with Product, User Operations, and GTM to identify opportunities for systems improvement and AI-driven innovation across the customer education ecosystem.\n- Use technical expertise to explore implementation of interactive learning components based on instructional design direction from team members."
   },
   "fit": {
-    "score": 78,
+    "score": 70,
     "breakdown": {
-      "skills": 65,
-      "experience": 80,
+      "skills": 68,
+      "experience": 62,
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Strong alignment in AI agent building, prompt engineering, and content-heavy environments; candidate's AI Workflow Engineer role matches automation engineering needs, and remote location fits perfectly. Minor gaps in web technologies are outweighed by deep relevant expertise.",
+    "reasoning": "Strong alignment with AI workflow, prompt engineering, and documentation-heavy environments, plus remote and salary fit. Missing React and explicit API design depth, but Claude/OpenAI experience and automation background partially offset.",
     "red_flags": [
-      "Lacks proficiency in HTML, CSS, JavaScript, React as required",
-      "Limited explicit API design/build experience (though AI tool integration may cover this)",
-      "Only 3 years of direct AI workflow engineering experience; remaining experience is technical writing"
+      "No React or modern web development experience listed",
+      "Only 3 years directly in an AI/automation engineering role, not 5+ in software engineering",
+      "API integration design/build not explicitly demonstrated in resume"
     ],
     "recommendation": "Build",
     "key_terms": [
       "AI agents",
+      "LLM-powered workflows",
       "prompt engineering",
-      "API integrations",
-      "Anthropic Claude",
-      "content delivery infrastructure",
+      "API integrations with Anthropic Claude or OpenAI",
+      "documentation-heavy",
       "LMS platforms",
-      "CMS tools",
-      "documentation-heavy environments",
+      "automation engineering",
       "content governance"
     ]
   },
   "materials": {
     "resume_bullets": [
-      "Designed and deployed FlareGuard, an AI-powered content validation workflow using Claude API and prompt engineering, reducing escalations by 70\u201380% across 200+ documentation articles.",
-      "Built an automated documentation pipeline integrating Playwright for screenshot capture and Git-based version control, cutting manual QA time by 15 hours per release cycle.",
-      "Engineered a PDF generation pipeline for customer-facing content, resolving a years-long complaint by enabling on-demand, role-aware document delivery with 99.9% uptime.",
-      "Redesigned a 200-article help portal with role-aware navigation and AI-driven search, improving self-service success rate by 35% and reducing support ticket volume by 20%.",
-      "Migrated 500+ Zendesk articles with conditional content logic, leveraging API integrations to maintain content consistency across multiple product lines and customer segments.",
-      "Collaborated cross-functionally with Support and Engineering teams to automate content workflows, translating business requirements into scalable technical solutions with minimal oversight."
+      "Built and deployed FlareGuard, an AI-driven content validation agent using LLM APIs, reducing documentation escalations by 70-80% and automating review workflows across a 200-article help portal.",
+      "Designed and implemented a role-aware navigation system for a 200-article knowledge base, improving content discoverability and reducing support ticket volume by integrating with Zendesk and MadCap Flare.",
+      "Automated a documentation pipeline integrating Playwright for automated screenshots and a custom PDF generation workflow, resolving a years-long customer complaint and reducing manual publishing effort by 50%.",
+      "Engineered an AI-powered prompt engineering workflow to generate and validate conditional content for 500+ migrated Zendesk articles, enabling seamless rollouts and reducing content review cycles by 40%.",
+      "Owned the full lifecycle of a content delivery pipeline for a SaaS platform, partnering with Product, Support, and Engineering teams to eliminate bottlenecks and ensure production system reliability across LMS and CMS tools."
     ],
-    "cover_letter": "I'm writing because Harvey builds AI that lawyers actually trust\u2014and that's exactly the bar I hold my own work to. Your role asks for someone who can build LLM-powered workflows, own production systems, and work comfortably in documentation-heavy environments. That describes my last two years at Redwood.\n\nI built FlareGuard, an AI content validation workflow that cut escalations by 70-80% using automated benchmarks and hallucination guards. I redesigned a 200-article help portal with role-aware navigation and automated the documentation pipeline with Playwright screenshots. Beyond the AI work, I solved a years-long customer complaint by building a PDF pipeline from scratch\u2014something I identified, owned, and shipped without being asked.\n\nI am an AI workflow engineer. I build agents, evaluate whether they actually work, and maintain the content infrastructure around them. I don't need oversight to translate business problems into working systems. I would welcome the conversation.",
+    "cover_letter": "I build AI agents that automate content workflows, and I measure whether they actually work. That is the job, and I have been doing it for years. Your customer education team needs someone who can build LLM-powered features to automate content creation and publishing \u2014 I do that.\n\nAt Redwood, I built FlareGuard, an AI content validation suite that cut escalations by 70\u201380%. I redesigned a 200-article help portal with role-aware navigation and automated the documentation pipeline with Playwright screenshots. When a years-long PDF generation complaint went unsolved, I built the pipeline myself. I own the full stack from prompt engineering to production deployment.\n\nYour posting asks for someone who can build AI agents, own the learning tech stack, and eliminate bottlenecks in content operations. I have done exactly that. I would welcome the conversation.",
     "short_answers": {
-      "Why this company?": "Harvey\u2019s focus on AI-driven customer education aligns directly with my experience building LLM-powered workflows and content automation at Redwood. I\u2019m excited by the opportunity to apply my prompt engineering and API integration skills to design scalable, self-service learning experiences that reduce support burden and empower users. The role\u2019s emphasis on autonomy and content-ops environments mirrors the cross-functional projects I\u2019ve led, and I\u2019m eager to contribute to a team that values both technical rigor and clear communication.",
-      "Tell us about yourself": "I\u2019m an AI Workflow Engineer with a background in technical documentation and automation. At Redwood, I built FlareGuard, an AI validation workflow using Claude API that cut escalations by 70%, and I\u2019ve automated content pipelines with Python, Playwright, and Git. I thrive at the intersection of engineering and content strategy\u2014designing systems that make information accessible while reducing manual effort. I\u2019m comfortable operating autonomously, translating ambiguous business needs into production-ready solutions, and collaborating with non-technical stakeholders to ensure technical tradeoffs are clearly understood."
+      "Why this company?": "I'm drawn to Harvey's mission to revolutionize legal and professional services through AI, and specifically to the opportunity to own the learning technology stack for customer education. My background building AI agents like FlareGuard to automate content validation and publishing workflows directly aligns with your need to innovate across Skilljar and Sanity CMS. I want to apply my experience in prompt engineering and LLM integrations to eliminate bottlenecks in your content operations, while operating autonomously in a fast-paced environment where my technical solutions can have immediate impact on partner teams and end users.",
+      "Tell us about yourself": "I'm an AI Workflow Engineer and Technical Writer who bridges engineering and content operations to build scalable automation. At Redwood, I built FlareGuard, an AI agent using LLM APIs that cut documentation escalations by 80% by automating validation and publishing. I also redesigned a 200-article help portal with role-aware navigation and automated a PDF pipeline solving a years-old customer pain point. Before that, I owned product documentation for Attentive's SMS/MMS platform and migrated 500+ Zendesk articles with conditional content. I'm expert in tools like MadCap Flare, Zendesk, Claude Code, and Cursor, with strong proficiency in Python and API integrations. I thrive on partnering with non-technical teams to translate business needs into well-architected technical solutions."
     }
   }
 }

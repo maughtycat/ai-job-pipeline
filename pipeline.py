@@ -61,6 +61,11 @@ def cmd_analyze(args):
             "remote_type": posting.remote_type,
             "salary_range": posting.salary_range,
             "required_skills": posting.required_skills,
+            "preferred_skills": posting.preferred_skills,
+            "years_experience": posting.years_experience,
+            "responsibilities": posting.responsibilities,
+            "application_questions": posting.application_questions,
+            "raw_text": posting.raw_text,
         },
         "fit": {
             "score": fit.score,

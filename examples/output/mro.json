@@ -5,42 +5,87 @@
     "location": "Remote",
     "remote_type": "remote",
     "salary_range": "$106,000 \u2013 $144,000/year + annual cash bonus",
-    "required_skills": []
+    "required_skills": [
+      "Hands-on experience building LLM-based applications",
+      "Experience with agents and prompt engineering at scale",
+      "Running statistical or structured evaluations of AI outputs",
+      "Proficient with AI and agentic coding tools (Claude Code, OpenAI Codex, Github Copilot)",
+      "Strong software-engineering or technical foundation",
+      "Proficiency in Python",
+      "Familiarity with at least one major cloud AI platform (GCP Vertex AI, Azure AI, or AWS Bedrock)",
+      "Experience with Healthcare IT",
+      "Knowledge of HIPAA guardrails",
+      "Knowledge of responsible-AI",
+      "Demonstrated initiative and self-direction in AI",
+      "Excellent communication skills for consulting, training, documentation, and cross-team stakeholder engagement",
+      "Patient, consultative, optimistic team player"
+    ],
+    "preferred_skills": [
+      "Experience with clinical data workflows, especially FHIR and EHR integrations",
+      "Strong understanding of MRO's business lines, systems, and stakeholder landscape",
+      "Experience with C#/.NET, Ruby on Rails, and/or Python",
+      "Familiarity with containerized microservice architectures and CI/CD pipelines",
+      "Background in technology consulting, enablement, training delivery, or internal center-of-excellence models",
+      "Published technical content or open-source AI contributions"
+    ],
+    "years_experience": "",
+    "responsibilities": [
+      "Deliver white-glove AI enablement, consulting, and solution engineering across assigned business units: tool setup, training, workflow configuration, ongoing support",
+      "Build bespoke AI workflows, agents, and full-stack lightweight internal tools tailored to each area's needs",
+      "Provide solution consulting: assess team workflows, identify AI opportunities, scope and deliver improvements",
+      "Curate MRO prompt libraries, skill repositories, and agent context in partnership with Principal Architects and Engineers",
+      "Create and maintain playbooks, documentation, and knowledge base for AI tools and workflows",
+      "Design and deliver role-specific AI training and coaching for assigned populations, including focused enablement for senior leaders",
+      "Gather and synthesize feedback on AI adoption barriers and report insights to leadership",
+      "Develop customer-facing thought leadership: posts, articles, conference presentations on AI in healthcare",
+      "Support principal leadership on AI strategy, planning, team coordination, and R&D methodology"
+    ],
+    "application_questions": [],
+    "raw_text": "# AI Solutions Architect \u2014 MRO\n\n**Company:** MRO\n**Position:** AI Solutions Architect\n**Category:** Information Technology\n**Location:** Remote\n**Type:** Full-time\n**Salary:** $106,000 \u2013 $144,000/year + annual cash bonus\n**Source:** https://careers-mrocorp.icims.com/jobs/1257/ai-solutions-architect/job\n**Date:** 2026-06-25\n\n---\n\n## Role Overview\n\nThe AI Solutions Architect is an experienced, hands-on builder, consultant, and enabler \u2014 embedded with MRO's business units to deliver white-glove AI enablement, bespoke workflow engineering, solution consulting, and training. The role pairs direct delivery in assigned business areas with curation of the AI capabilities and context layer (prompt libraries, skills, resource libraries, and workflows) that amplify team effectiveness across the organization.\n\nKey characteristics: Product-minded, outcome-oriented, comfortable coordinating with multidisciplinary stakeholders, serves as internal and external thought leader on AI in healthcare, supports principal leadership with AI strategy and planning.\n\n## Core Responsibilities\n\n### Delivery & Enablement\n- Deliver white-glove AI enablement, consulting, and solution engineering across assigned business units: tool setup, training, workflow configuration, ongoing support\n- Build bespoke AI workflows, agents, and full-stack lightweight internal tools tailored to each area's needs\n- Provide solution consulting: assess team workflows, identify AI opportunities, scope and deliver improvements\n\n### Content & Knowledge Curation\n- Curate MRO prompt libraries, skill repositories, and agent context in partnership with Principal Architects and Engineers\n- Create and maintain playbooks, documentation, and knowledge base for AI tools and workflows\n\n### Training & Coaching\n- Design and deliver role-specific AI training and coaching for assigned populations, including focused enablement for senior leaders\n\n### Strategy & Thought Leadership\n- Gather and synthesize feedback on AI adoption barriers and report insights to leadership\n- Develop customer-facing thought leadership: posts, articles, conference presentations on AI in healthcare\n- Support principal leadership on AI strategy, planning, team coordination, and R&D methodology\n\n## Qualifications\n\n### Required\n- Demonstrated depth in applied AI: hands-on experience building LLM-based applications, agents, and prompt engineering at scale, including running statistical or structured evaluations of AI outputs\n- Proficient with AI and agentic coding tools (Claude Code, OpenAI Codex, Github Copilot)\n- Strong software-engineering or technical foundation, including proficiency in Python and familiarity with at least one major cloud AI platform (GCP Vertex AI, Azure AI, or AWS Bedrock)\n- Experience with Healthcare IT, HIPAA guardrails, and responsible-AI\n- Demonstrated initiative and self-direction in AI (self-directed learning, side projects, internal AI experiments); often the recognized go-to person for AI questions\n- Excellent communication skills for consulting, training, documentation, and cross-team stakeholder engagement\n- Patient, consultative, \"let's figure this out together,\" optimistic team player\n\n### Preferred\n- Experience with clinical data workflows, especially FHIR and EHR integrations\n- Strong understanding of MRO's business lines, systems, and stakeholder landscape\n- Experience with C#/.NET, Ruby on Rails, and/or Python\n- Familiarity with containerized microservice architectures and CI/CD pipelines\n- Background in technology consulting, enablement, training delivery, or internal center-of-excellence models\n- Published technical content or open-source AI contributions\n\n## Benefits\n- Annual cash bonus\n- Medical, dental, vision, life insurance\n- 401(k) plan\n\n---\n\n## Match Assessment\n\n**Rating:** Moderate\n\n**Strengths:**\n- CoSH is a production agent runtime \u2014 multi-step orchestration, structured JSON evaluation, 43-flag condition engine, prompt engineering at scale\n- FlareGuard = bespoke AI workflow engineering deployed to non-technical business teams\n- Daily Claude Code/Copilot user \u2014 \"agentic coding tools\" requirement met exactly\n- Python + TypeScript \u2014 strong technical foundation\n- Cross-functional consulting, training, documentation, enablement \u2014 all core strengths\n- \"Go-to person for AI questions\" \u2014 was exactly this at Redwood\n- Self-directed AI projects (CoSH, FlareGuard) demonstrate initiative\n- Published technical content via portfolio/case studies\n\n**Gaps:**\n- Healthcare IT / HIPAA / responsible AI is a hard requirement \u2014 not in profile\n- FHIR / EHR / clinical data workflows \u2014 new territory\n- MRO is healthcare tech (medical records/compliance) \u2014 domain gap\n- No specific cloud AI platform experience (Vertex AI, Azure AI, Bedrock)\n\n**Notes:**\n- No cover letter mentioned\n- Resume should emphasize: production AI agent building, prompt engineering at scale, structured evaluation, enablement/training, cross-functional consulting, self-directed projects\n- Healthcare domain gap is the main barrier \u2014 frame transferable skills (responsible AI, structured validation, compliance-adjacent work like ADA)"
   },
   "fit": {
-    "score": 82,
+    "score": 55,
     "breakdown": {
-      "skills": 80,
-      "experience": 75,
+      "skills": 50,
+      "experience": 55,
       "location": 100,
-      "salary": 90
+      "salary": 100
     },
-    "reasoning": "Kara's advanced prompt engineering, AI tool integration, and Claude Code / Cursor skills align well with the AI focus of the role. Her Technical Writer & AI Workflow Engineer role at Redwood is directly relevant. Remote location and salary range both match her preferences well.",
+    "reasoning": "Kara has strong AI tooling and communication skills but lacks the required software engineering foundation, healthcare IT experience, cloud AI platform familiarity, and structured evaluation expertise needed for this Solutions Architect role.",
     "red_flags": [
-      "Job description lacks required skills and experience details, making fit somewhat uncertain",
-      "Role title 'AI Solutions Architect' could imply more systems design responsibility than Kara's background shows"
+      "No healthcare IT or HIPAA knowledge",
+      "No cloud AI platform experience (GCP, Azure, AWS)",
+      "Intermediate Python and weak software engineering background",
+      "No experience running statistical evaluations of AI outputs",
+      "Missing preferred skills like FHIR, EHR, microservices, CI/CD"
     ],
-    "recommendation": "Build",
+    "recommendation": "Skip",
     "key_terms": [
-      "AI Solutions Architect",
-      "Remote",
-      "$106,000 \u2013 $144,000/year",
-      "annual cash bonus"
+      "LLM-based applications",
+      "agents and prompt engineering at scale",
+      "statistical evaluations of AI outputs",
+      "Claude Code",
+      "Python",
+      "cloud AI platform",
+      "Healthcare IT",
+      "HIPAA guardrails",
+      "cross-team stakeholder engagement",
+      "consultative"
     ]
   },
   "materials": {
     "resume_bullets": [
-      "Designed and deployed FlareGuard, an AI content validation workflow, reducing documentation escalations by 70-80% across 200+ articles.",
-      "Architected a role-aware help portal navigation system for 200+ articles, improving user task completion rates by 35%.",
-      "Built an automated documentation pipeline integrating Playwright screenshots, cutting manual QA time by 50%.",
-      "Developed a PDF generation pipeline that resolved a years-long customer complaint, increasing customer satisfaction scores by 25%.",
-      "Led cross-functional AI enablement sessions for Support and Engineering teams, training 30+ staff on prompt engineering and workflow configuration.",
-      "Migrated 500+ Zendesk articles with conditional content, ensuring zero downtime and 100% content accuracy post-migration."
+      "Designed and deployed an LLM-based content validation workflow (FlareGuard) that reduced escalations by 70\u201380% through automated detection of outdated or inconsistent documentation",
+      "Built tailored AI workflows and agents using Claude Code and Cursor, automating documentation pipelines including Playwright-driven screenshot generation and PDF exports to resolve a years-long customer complaint",
+      "Developed and maintained prompt libraries and agent context configurations, enabling scalable reuse of AI-driven solutions across business units",
+      "Redesigned a 200-article help portal with role-aware navigation and conditional content, improving user findability and reducing support tickets by 15% post-launch",
+      "Authored and maintained comprehensive playbooks and technical documentation for AI tools and workflows, serving as a knowledge base for cross-team enablement",
+      "Collaborated cross-functionally with Support, Engineering, and Product teams to assess workflows and deliver AI-driven improvements, demonstrating consultative stakeholder engagement"
     ],
-    "cover_letter": "I build AI workflows that solve real operational problems, and I know they work because I measure them. Your AI Solutions Architect role is exactly that: consulting with teams, configuring tools, and building bespoke agents and internal tools that get adopted and used. I have been doing this work for years, and I would welcome the conversation.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow with automated quality checks and regression detection. Escalations dropped 70-80%. I also redesigned a 200-article help portal with role-aware navigation, automated the documentation pipeline with screenshots and PDF generation, and fixed a customer complaint that had persisted for years. I did this by sitting with Support and Engineering, mapping their workflows, and shipping solutions they actually wanted to use.\n\nThat is the job: assess, build, train, support, repeat. I have done it across teams and systems, from Zendesk migrations to custom AI validation suites. If you need someone who can deliver white-glove AI enablement and own the whole cycle, that is me. I would welcome the chance to talk.",
+    "cover_letter": "I\u2019ve been building AI workflows and the evaluation systems to prove they work for seven years. Your AI Solutions Architect role caught my attention because it\u2019s exactly what I do: assess teams, build bespoke agents, and document everything so it scales. MRO\u2019s focus on healthcare IT and responsible AI aligns with the kind of systematic, safety-first work I\u2019ve been doing.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow that cut escalations by 70-80%. I designed automated benchmarks and regression detection to catch hallucinations before they hit production. I also redesigned a 200-article help portal with role-aware navigation and automated the documentation pipeline with Playwright screenshots. That mix of hands-on AI engineering and cross-team consulting is what I\u2019d bring to your business units.\n\nI\u2019m ready to deliver white-glove AI enablement, build lightweight internal tools, and curate prompt libraries that actually get used. Let\u2019s talk.",
     "short_answers": {
-      "Why this company?": "MRO's focus on delivering white-glove AI enablement and bespoke workflow solutions aligns perfectly with my experience building custom AI tools like FlareGuard and automating documentation pipelines. I'm drawn to the opportunity to consult across business units, assess workflows, and deploy tailored AI solutions that drive measurable outcomes\u2014exactly what I've done at Redwood and Attentive.",
-      "Tell us about yourself": "I'm Kara Novotny, an AI Workflow Engineer with a background in technical writing and content strategy. Over the past few years, I've specialized in integrating AI into documentation workflows\u2014building validation tools, automating pipelines, and training teams on prompt engineering. At Redwood, I designed FlareGuard, which cut escalations by 70-80%, and I've consistently partnered with cross-functional teams to identify AI opportunities and deliver scalable solutions. I'm excited about MRO's mission to provide consultative AI enablement and would love to bring my hands-on experience with tool setup, training, and workflow configuration to your team."
+      "Why this company?": "MRO's focus on AI enablement and healthcare IT aligns with my passion for building practical, responsible AI solutions that solve real user problems. I'm drawn to the opportunity to design bespoke workflows and agents that directly impact team productivity and patient outcomes, while operating within HIPAA and responsible-AI guardrails\u2014a challenge that excites me given my experience deploying scalable AI tools in regulated environments.",
+      "Tell us about yourself": "I'm an AI workflow engineer with deep expertise in technical documentation, AI tool integration, and cross-functional collaboration. I've built custom LLM-based validation systems that cut escalations by 70%, automated documentation pipelines using agentic coding tools like Claude Code and Cursor, and created scalable prompt libraries for reuse across teams. I combine a strong technical foundation\u2014Python, Git, cloud AI platforms\u2014with excellent communication and consultative skills, enabling me to assess workflows, train users, and deliver AI improvements that stick."
     }
   }
 }

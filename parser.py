@@ -53,7 +53,7 @@ def parse_posting(text: str, url: str = "") -> JobPosting:
         responsibilities=data.get("responsibilities", []),
         application_questions=data.get("application_questions", []),
         url=url,
-        raw_text=text[:2000],
+        raw_text=text,
     )
 
 

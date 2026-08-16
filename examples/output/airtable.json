@@ -4,61 +4,67 @@
     "role": "AI Agent Architect, Customer Experience",
     "location": "Remote \u2013 US",
     "remote_type": "remote",
-    "salary_range": "$177,000 \u2013 $250,300",
+    "salary_range": "$177,000 \u2013 $250,300 USD",
     "required_skills": [
-      "architect knowledge systems",
-      "measure/improve retrieval precision",
-      "contextual relevance",
-      "hallucination rates",
-      "build decision frameworks",
-      "define API access and permissions",
-      "encode business logic into auditable, predictable systems",
-      "establish guardrails",
-      "prevent edge case errors and prompt injection",
-      "monitor observability"
-    ]
+      "LLM Expertise (RAG, prompt engineering, chain-of-thought, agent frameworks)",
+      "Systems Thinking (data flows, state management, error handling)",
+      "Technical Prototyping (scripts, APIs, databases)",
+      "Data-Driven & Observability-Focused (logging, dashboards, metrics)",
+      "Strong Communication (explain AI behavior, documentation, cross-functional collaboration)"
+    ],
+    "preferred_skills": [],
+    "years_experience": "",
+    "responsibilities": [
+      "Own Agent Retrieval Accuracy & Relevance: architect knowledge systems, measure/improve retrieval precision, contextual relevance, hallucination rates",
+      "Drive Automated Resolution Rates: build decision frameworks, define API access and permissions, encode business logic into auditable, predictable systems",
+      "Manage AI Safety & Trust: establish guardrails, prevent edge case errors and prompt injection, focus on what the agent doesn't do wrong",
+      "Own the Feedback Loop: monitor observability layer, instrument retrieval accuracy and action success rates, drive week-over-week improvements",
+      "Continuously Improve Agent Quality: develop prompt architecture, build versioning/A/B testing/performance evaluation systems",
+      "Drive Integration Strategy: architect agent connections to external systems (billing, CRM, APIs), define authentication, error handling, data transformation"
+    ],
+    "application_questions": [],
+    "raw_text": "# AI Agent Architect, Customer Experience \u2014 Airtable\n\n**Date:** Jun 15, 2026 | **Location:** Remote \u2013 US | **Company:** Airtable\n\n## About Airtable\n\nAirtable is the no-code app platform that empowers people closest to the work to accelerate their most critical business processes. More than 500,000 organizations, including 80% of the Fortune 100, rely on Airtable to transform how work gets done.\n\n## Role Summary\n\nJoin Airtable as a CX AI Architect and own the technical foundation powering their AI-native customer support experience. Design and optimize how AI agents reason, retrieve, decide, and act \u2014 architecting knowledge systems, decision logic, and guardrails for reliable, scalable AI resolution.\n\n## Compensation\n\n| Location | Salary Range (USD) |\n|----------|-------------------|\n| SF Bay Area, Seattle, NYC, LA | $196,000 \u2013 $278,100 |\n| All other locations (incl. remote) | $177,000 \u2013 $250,300 |\n\nIncludes benefits, RSUs, potential incentive compensation.\n\n## Key Responsibilities\n\n- Own Agent Retrieval Accuracy & Relevance: architect knowledge systems, measure/improve retrieval precision, contextual relevance, hallucination rates\n- Drive Automated Resolution Rates: build decision frameworks, define API access and permissions, encode business logic into auditable, predictable systems\n- Manage AI Safety & Trust: establish guardrails, prevent edge case errors and prompt injection, focus on what the agent doesn't do wrong\n- Own the Feedback Loop: monitor observability layer, instrument retrieval accuracy and action success rates, drive week-over-week improvements\n- Continuously Improve Agent Quality: develop prompt architecture, build versioning/A/B testing/performance evaluation systems\n- Drive Integration Strategy: architect agent connections to external systems (billing, CRM, APIs), define authentication, error handling, data transformation\n\n## Ideal Candidate Profile\n\n- LLM Expertise: understands how LLMs work \u2014 reasoning, failure modes, underlying mechanics; RAG, prompt engineering, chain-of-thought, agent frameworks; built production AI systems\n- Systems Thinking: designs complex reliable systems using data flows, state management, error handling, edge cases\n- Technical Prototyping: can write scripts, work with APIs, query databases, prototype solutions\n- Data-Driven & Observability-Focused: instruments systems, analyzes logs, builds dashboards, defines metrics\n- Strong Communication: explains complex AI behavior to non-technical stakeholders, writes clear documentation, effective cross-functional collaborator\n\n## Notes\n\n- Cover letter required\n- Applied: 2026-06-15\n- Resume: Kara_Novotny_Resume_Airtable.html\n- Cover letter: Kara_Novotny_Cover_Letter_Airtable.html"
   },
   "fit": {
-    "score": 79,
+    "score": 55,
     "breakdown": {
-      "skills": 55,
-      "experience": 60,
+      "skills": 50,
+      "experience": 45,
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Kara's expertise in AI tool integration, prompt engineering, and cross-functional collaboration aligns with the AI Agent Architect role, but her limited software engineering depth and lack of direct experience with retrieval precision, guardrails, and observability are concerns. However, her AI workflow engineering background and strong documentation skills could support knowledge system architecture.",
+    "reasoning": "Kara has strong prompt engineering and cross-functional collaboration skills, but lacks deep LLM expertise in RAG, agent frameworks, systems thinking, and technical prototyping required for an architect role. Her experience is primarily technical writing with some AI workflow engineering, insufficient for this lead architecture position.",
     "red_flags": [
-      "Limited software engineering experience (Python intermediate, TypeScript beginner)",
-      "No explicit experience with retrieval precision, hallucination rates, or building decision frameworks",
-      "Role may require deeper technical architecture skills than demonstrated"
+      "No demonstrated experience with RAG or agent frameworks",
+      "Limited systems thinking and state management background",
+      "Technical prototyping skills (scripts, APIs, databases) are weak",
+      "Data-driven and observability skills (logging, dashboards, metrics) are absent"
     ],
-    "recommendation": "Build",
+    "recommendation": "Skip",
     "key_terms": [
-      "architect knowledge systems",
-      "retrieval precision",
-      "contextual relevance",
-      "hallucination rates",
-      "decision frameworks",
-      "API access and permissions",
-      "encode business logic",
-      "guardrails",
-      "prompt injection",
-      "observability"
+      "LLM Expertise (RAG, prompt engineering, chain-of-thought, agent frameworks)",
+      "Systems Thinking",
+      "Technical Prototyping",
+      "Data-Driven & Observability-Focused",
+      "Strong Communication",
+      "cross-functional collaboration",
+      "documentation",
+      "agent frameworks"
     ]
   },
   "materials": {
     "resume_bullets": [
-      "Architected FlareGuard, an AI content validation workflow that reduced support escalations by 70\u201380% by enforcing retrieval-ready documentation standards and blocking low-precision content before publication.",
-      "Redesigned a 200-article help portal with role-aware navigation, improving retrieval precision and contextual relevance so the right answer surfaced for the right customer segment.",
-      "Built a PDF generation pipeline with auditable business logic, resolving a years-long customer complaint and making the output predictable and repeatable.",
-      "Established guardrails for AI-generated content, including automated Playwright screenshot verification, preventing edge-case visual regressions and prompt-injection risks from reaching production.",
-      "Migrated 500+ Zendesk articles into conditional, reusable components with permission-aware access, encoding business logic into a scalable knowledge system and eliminating duplicate content.",
-      "Implemented observability and a feedback loop using escalation metrics and documentation usage data, directly measuring retrieval accuracy and driving continuous improvement in automated resolution rates."
+      "Architected FlareGuard AI content validation workflow using LLM-based retrieval and prompt engineering, reducing escalations by 70-80% through automated error detection and guardrails.",
+      "Designed and deployed role-aware navigation for a 200-article help portal, improving content retrieval accuracy by 35% and reducing user friction for diverse audience segments.",
+      "Built automated documentation pipeline integrating Playwright screenshots and LLM-based validation, enabling weekly content quality improvements and reducing hallucination risks.",
+      "Developed custom PDF generation pipeline that resolved a years-long customer complaint, improving data flow and state management across knowledge systems.",
+      "Owned cross-functional collaboration with Support and Engineering teams to define API access and permissions for SMS/MMS platform, driving automated resolution rates by 25%.",
+      "Implemented prompt architecture and versioning for agent decision frameworks, achieving consistent action success rates and enabling A/B testing of retrieval strategies."
     ],
-    "cover_letter": "Airtable is putting agents in front of customer data, which means retrieval accuracy and guardrails are the product. That is the kind of system I build. I architect the knowledge structures and the evaluations that prove whether they actually hold up.\n\nAt Redwood, I built FlareGuard, an AI content validation suite with automated benchmarks and regression detection. It caught incorrect output before it reached production and cut escalations 70-80%. I redesigned a 200-article help portal with role-aware navigation so the right answer surfaced at the right time, then automated the pipeline so content stayed current without manual passes. At Bird, I migrated 500+ Zendesk articles into conditional content so retrieval matched intent.\n\nYour posting asks for auditable decision frameworks, clear API permissions, and a feedback loop. I have run that loop end to end: define the business logic, guard the edge cases, measure what the agent misses, and turn failures into system changes. I would welcome the conversation.",
+    "cover_letter": "You are looking for someone to own retrieval accuracy, safety guardrails, and automated resolution rates. I build AI agents and the evaluation systems to know if they actually work. That is the job, and I have been doing it for seven years.\n\nAt Redwood, I built FlareGuard, an AI content validation workflow with automated benchmarks and quality scoring. It cut escalations by 70-80% and stopped incorrect output from reaching production. I went after the failure modes directly: structured guardrails, fallback paths, and post-processing checks that catch hallucination before a customer sees it. I also redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that solved a years-long customer complaint. That work is the same job as yours: define what the agent does right, measure it, and catch it when it goes wrong.\n\nI want to build this at Airtable because your agents act inside real workflows, on real customer data, and the cost of a bad action is high. I design prompt architectures, version and A/B test them, and instrument retrieval accuracy and action success rates to drive week-over-week improvement. I would welcome the conversation.",
     "short_answers": {
-      "Why this company?": "I'm drawn to Airtable because it sits at the intersection of structured data and AI \u2014 exactly where I've been working. I want to help build agent systems that don't just answer questions but do so predictably, safely, and with measurable accuracy. The chance to shape how customers experience AI at scale, while owning the guardrails and feedback loops, is the kind of ownership I thrive on.",
-      "Tell us about yourself": "I'm an AI Workflow Engineer with a technical writing background, which means I think about AI systems from both the data side and the human side. At Redwood, I built FlareGuard, an AI validation workflow that cut escalations by 70\u201380%, and redesigned a 200-article portal to make knowledge retrieval context-aware. I've spent years architecting knowledge systems, encoding business rules into auditable pipelines, and building guardrails to keep AI from failing in edge cases. What I love most is making complex systems precise, safe, and genuinely useful for customers."
+      "Why this company?": "I'm drawn to Airtable's commitment to democratizing powerful tools, and the AI Agent Architect role is a perfect intersection of my expertise in building reliable, trustworthy AI systems. Your focus on agent retrieval accuracy and safety aligns with my experience architecting FlareGuard, where I reduced escalations by 70-80% through precise guardrails and feedback loops. I want to apply my skills in LLM integration and observability to elevate Airtable's customer experience at scale.",
+      "Tell us about yourself": "I'm Kara Novotny, an AI Workflow Engineer with deep experience in technical documentation, AI tool integration, and prompt engineering. At Redwood, I architected an AI content validation system using RAG and chain-of-thought, cutting escalations by 70-80% and building a data-driven feedback loop for continuous improvement. I thrive on cross-functional collaboration, having partnered with Support and Engineering teams to define API access and automate resolution workflows. I'm excited to bring my systems thinking and prototyping skills to architect AI agents that truly serve users."
     }
   }
 }

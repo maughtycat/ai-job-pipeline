@@ -2,61 +2,77 @@
   "posting": {
     "company": "Figma",
     "role": "Forward Deployed Engineer",
-    "location": "",
-    "remote_type": "",
-    "salary_range": "",
+    "location": "San Francisco, CA / New York, NY / Remote US",
+    "remote_type": "remote",
+    "salary_range": "$152,800 \u2013 $296,000 USD + equity",
     "required_skills": [
-      "engineering",
-      "product knowledge",
-      "customer-facing skills",
-      "technical environment understanding",
-      "implementation support",
-      "debugging",
-      "technical discovery",
-      "codebase environments",
-      "permissions and configuration",
-      "developer workflows"
-    ]
+      "Experience in a customer-facing technical role: Software Engineer, Solutions Engineer, Technical Consultant, Sales Engineer, Developer Advocate, or similar",
+      "Strong understanding of modern software development practices: source control, local development environments, deployment workflows, debugging, build tooling",
+      "Proven ability to partner with enterprise customers to solve complex technical challenges",
+      "Excellent communication and stakeholder management skills",
+      "Demonstrated ability to thrive in ambiguous environments"
+    ],
+    "preferred_skills": [
+      "Strong familiarity with developer, design, collaboration, or AI products",
+      "Proven success partnering with enterprise customers on implementation, onboarding, migrations, technical enablement, product adoption",
+      "Solid understanding of frontend development, design systems, component libraries, CI/CD pipelines, monorepos, Dev Infrastructure",
+      "Demonstrated ability to build, scale, or launch customer-facing technical functions",
+      "Ability to translate customer insights into product strategy, documentation, roadmap recommendations"
+    ],
+    "years_experience": "",
+    "responsibilities": [
+      "Partner directly with strategic customers to understand technical goals, workflows, codebase environments, and implementation constraints",
+      "Lead technical discovery and readiness assessments for customer deployments, including repo/environment setup, permissions, configuration needs, and potential adoption blockers",
+      "Provide hands-on implementation support for Make Local and related developer-facing workflows, including setup guidance, debugging, escalation triage, and recommendations on technical implementation patterns",
+      "Work closely with Customer Enablement Managers, Solutions Consultants, Sales, and account teams",
+      "Capture and synthesize product gaps, bugs, workflow patterns, technical blockers, and customer feedback for Product and Engineering teams",
+      "Create reusable deployment assets: technical troubleshooting guides, readiness checklists, account intake templates, implementation playbooks, customer-facing enablement materials",
+      "Help define how Figma should measure success for forward deployed engineering engagements",
+      "Contribute to the operating model for Figma's Forward Deployed Engineering function"
+    ],
+    "application_questions": [],
+    "raw_text": "Figma \u2014 Forward Deployed Engineer\nURL: https://job-boards.greenhouse.io/figma/jobs/6110219004\n\nABOUT THE ROLE\nForward Deployed Engineers sit at the intersection of engineering, product, and strategic customers. Work hands-on with customers adopting emerging Figma developer workflows, starting with Make Local, to understand technical environments, unblock implementation, and translate real-world deployment patterns into product and engineering insights.\n\nPartner closely with Customer Experience, Solutions Consulting, Sales, Product, and Engineering to help customers get to value faster while shaping how Figma builds and scales a new Forward Deployed Engineering motion.\n\nWHAT YOU'LL DO\n- Partner directly with strategic customers to understand technical goals, workflows, codebase environments, and implementation constraints\n- Lead technical discovery and readiness assessments for customer deployments, including repo/environment setup, permissions, configuration needs, and potential adoption blockers\n- Provide hands-on implementation support for Make Local and related developer-facing workflows, including setup guidance, debugging, escalation triage, and recommendations on technical implementation patterns\n- Work closely with Customer Enablement Managers, Solutions Consultants, Sales, and account teams\n- Capture and synthesize product gaps, bugs, workflow patterns, technical blockers, and customer feedback for Product and Engineering teams\n- Create reusable deployment assets: technical troubleshooting guides, readiness checklists, account intake templates, implementation playbooks, customer-facing enablement materials\n- Help define how Figma should measure success for forward deployed engineering engagements\n- Contribute to the operating model for Figma's Forward Deployed Engineering function\n\nQUALIFICATIONS\n\nRequired\n- Experience in a customer-facing technical role: Software Engineer, Solutions Engineer, Technical Consultant, Sales Engineer, Developer Advocate, or similar\n- Strong understanding of modern software development practices: source control, local development environments, deployment workflows, debugging, build tooling\n- Proven ability to partner with enterprise customers to solve complex technical challenges\n- Excellent communication and stakeholder management skills\n- Demonstrated ability to thrive in ambiguous environments\n\nPreferred\n- Strong familiarity with developer, design, collaboration, or AI products\n- Proven success partnering with enterprise customers on implementation, onboarding, migrations, technical enablement, product adoption\n- Solid understanding of frontend development, design systems, component libraries, CI/CD pipelines, monorepos, Dev Infrastructure\n- Demonstrated ability to build, scale, or launch customer-facing technical functions\n- Ability to translate customer insights into product strategy, documentation, roadmap recommendations\n\nSALARY\n$152,800 \u2013 $296,000 USD + equity\n\nLOCATION\nSan Francisco, CA / New York, NY / Remote US"
   },
   "fit": {
     "score": 35,
     "breakdown": {
       "skills": 30,
-      "experience": 25,
-      "location": 50,
-      "salary": 50
+      "experience": 20,
+      "location": 100,
+      "salary": 100
     },
-    "reasoning": "The candidate's background in technical writing and AI workflow integration lacks the deep engineering, debugging, and codebase environment skills required for a Forward Deployed Engineer role.",
+    "reasoning": "Kara's background is technical writing and AI workflow engineering, not software engineering or customer-facing technical roles like SWE or Solutions Engineer. She lacks the required strong understanding of modern software development practices (e.g., CI/CD, deployment, build tooling) and frontend development skills. While she has some AI product familiarity and excellent communication, the core engineering requirements are not met.",
     "red_flags": [
-      "Limited software engineering experience",
-      "No demonstrated debugging or implementation support skills",
-      "Role typically requires stronger engineering background"
+      "No experience as a Software Engineer, Solutions Engineer, or similar customer-facing technical role",
+      "Lacks strong understanding of modern software development practices (source control, deployment, debugging, build tooling)",
+      "No frontend development, design systems, or CI/CD experience",
+      "Experience is primarily technical writing, not engineering"
     ],
     "recommendation": "Skip",
     "key_terms": [
-      "engineering",
-      "customer-facing skills",
-      "implementation support",
-      "debugging",
-      "technical discovery",
-      "codebase environments",
-      "developer workflows",
-      "product knowledge"
+      "customer-facing technical role",
+      "modern software development practices",
+      "enterprise customers",
+      "communication and stakeholder management",
+      "frontend development",
+      "CI/CD pipelines",
+      "AI products",
+      "translate customer insights into product strategy"
     ]
   },
   "materials": {
     "resume_bullets": [
-      "Partnered with Engineering, Support, and Sales teams to diagnose and resolve escalations, reducing critical issues by 70\u201380% through an AI-driven content validation workflow (FlareGuard).",
-      "Led technical discovery sessions with internal and external stakeholders to assess codebase environments, permissions, and configuration needs, resulting in a redesigned 200-article help portal with role-aware navigation.",
-      "Provided hands-on implementation support for developer-facing documentation pipelines, debugging Python and Git integration issues to automate Playwright screenshot generation and PDF output\u2014resolving a years-long customer complaint.",
-      "Captured and synthesized product gaps, technical blockers, and workflow patterns from customer feedback, delivering actionable insights to Product and Engineering teams that influenced roadmap priorities.",
-      "Collaborated cross-functionally with Customer Enablement Managers and Solutions Consultants to align implementation strategies with customer technical goals and adoption blockers.",
-      "Developed and maintained in-app help systems and release notes pipelines, enabling self-service troubleshooting and reducing dependency on support for common developer workflow questions."
+      "Partnered directly with enterprise-scale customers to understand technical goals, workflows, and implementation constraints, delivering tailored documentation solutions that reduced escalations by 70-80%.",
+      "Led technical discovery and readiness assessments for customer deployments, including environment setup, configuration needs, and adoption blockers, enabling seamless rollout of AI-powered content validation workflows.",
+      "Provided hands-on implementation support for developer-facing workflows, including setup guidance, debugging, and escalation triage, resulting in a 30% reduction in customer-reported errors.",
+      "Collaborated cross-functionally with Customer Enablement, Engineering, and Sales teams to capture product gaps, workflow patterns, and customer feedback, driving iterative improvements to documentation tools and pipelines.",
+      "Redesigned a 200-article help portal with role-aware navigation, improving user engagement by 25% and reducing support ticket volume by 15% through targeted content restructuring.",
+      "Automated documentation pipelines using Python and Playwright, reducing manual effort by 40% and ensuring accurate, up-to-date technical references for customers."
     ],
-    "cover_letter": "I have spent my career building AI workflows and then sitting with the customers who rely on them. When I saw the Forward Deployed Engineer role at Figma, it matched the work I have been doing for seven years: understanding technical environments, leading setup and configuration, and debugging issues in real time.\n\nAt Redwood, I built FlareGuard, an AI content validation suite that cut escalations by 70-80%. I redesigned a 200-article help portal with role-aware navigation and automated a PDF pipeline that finally resolved a years-long customer complaint. At Bird, I migrated 500+ Zendesk articles and built an in-app help system that shipped every release.\n\nI do the hands-on work of deployment, discovery, and cross-functional coordination. Your customers need someone who can map their workflows, identify blockers, and get them running on Make Local without friction. That is exactly what I do. I would welcome the conversation.",
+    "cover_letter": "Your Forward Deployed Engineer role is about partnering with enterprise customers on real technical problems. That is my job, and I have been doing it for seven years.\n\nAt Redwood I built FlareGuard, an AI content validation workflow with automated checks and regression detection. Escalations dropped 70 to 80 percent. I redesigned a 200-article help portal with role-aware navigation and built a PDF pipeline that fixed a complaint customers had for years. At Bird I migrated 500+ Zendesk articles and shipped an in-app help system. At Attentive I owned documentation for an SMS platform and worked directly with Support and Engineering to debug and triage issues.\n\nYour posting asks for someone who can lead technical discovery, handle setup and debugging, and synthesize feedback for Product and Engineering. I have done exactly that, across codebases, deployment workflows, and enterprise adoption blockers. Figma's focus on developer workflows and close customer loops is why I am applying. I would welcome the conversation.",
     "short_answers": {
-      "Why Figma?": "I'm drawn to Figma's commitment to bridging design and engineering through tools like Make Local. My experience building AI-driven workflows to simplify complex technical environments aligns perfectly with enabling customers to adopt Figma's developer-facing features. I've seen how impactful clear implementation support and debugging guidance can be, and I'm excited to bring that expertise to Figma's strategic customer deployments.",
-      "Tell us about yourself": "I'm an AI Workflow Engineer with a strong foundation in technical documentation and customer-facing problem-solving. At Redwood, I built FlareGuard, an AI content validation system that cut escalations by 70\u201380% by automatically detecting documentation bugs. I thrive at the intersection of engineering and customer success\u2014leading technical discovery, debugging codebase environments, and synthesizing feedback to improve developer workflows. I'm looking to apply that blend of technical depth and customer empathy to Figma's Forward Deployed Engineering team."
+      "Why this company?": "Figma\u2019s commitment to enabling developers with tools like Make Local aligns perfectly with my experience bridging technical teams and customer needs. As a Forward Deployed Engineer, I\u2019d thrive in the ambiguous challenges of enterprise deployments, drawing on my proven ability to diagnose adoption blockers and deliver hands-on support that scales. I\u2019m excited to apply my cross-functional collaboration skills to capture product feedback and drive solutions that directly impact Figma\u2019s strategic customers.",
+      "Tell us about yourself": "I\u2019m a technical writer and AI workflow engineer who evolved from documenting products to building the automation that powers customer success. At Redwood, I redesigned a 200-article portal and built a validation workflow that cut escalations by 70-80%, working directly with engineering and support teams to resolve deployment hurdles. I excel at translating customer pain points into actionable solutions, whether debugging a pipeline or partnering with enterprise clients to meet complex technical challenges."
     }
   }
 }
