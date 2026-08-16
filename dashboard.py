@@ -108,7 +108,13 @@ with tab_demo:
         raw_text = posting.get("raw_text", "")
         if raw_text:
             with st.expander("View full job posting text"):
-                st.text(raw_text)
+                st.text_area(
+                    "Raw posting",
+                    value=raw_text,
+                    height=400,
+                    disabled=True,
+                    label_visibility="collapsed",
+                )
 
         st.divider()
         st.subheader("Generated Materials")

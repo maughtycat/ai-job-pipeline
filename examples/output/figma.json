@@ -41,7 +41,7 @@
       "location": 100,
       "salary": 100
     },
-    "reasoning": "Kara's background is technical writing and AI workflow engineering, not software engineering or customer-facing technical roles like SWE or Solutions Engineer. She lacks the required strong understanding of modern software development practices (e.g., CI/CD, deployment, build tooling) and frontend development skills. While she has some AI product familiarity and excellent communication, the core engineering requirements are not met.",
+    "reasoning": "Weak match. Forward Deployed Engineer requires deep implementation support, debugging, and codebase knowledge. Background is in documentation and AI workflow, not hands-on customer-facing engineering.",
     "red_flags": [
       "No experience as a Software Engineer, Solutions Engineer, or similar customer-facing technical role",
       "Lacks strong understanding of modern software development practices (source control, deployment, debugging, build tooling)",
