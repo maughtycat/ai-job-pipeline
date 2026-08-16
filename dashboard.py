@@ -107,6 +107,7 @@ with tab_demo:
 
         st.divider()
         st.subheader("Generated Materials")
+        st.caption("All outputs are first drafts. Review, edit, and personalize before submission. Many employers request AI-free application materials.")
 
         col_a, col_b = st.columns(2)
         with col_a:
