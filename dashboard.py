@@ -43,7 +43,7 @@ with tab_demo:
     st.header("Pipeline Demo")
     st.markdown(
         "Select a cached job posting to see how the pipeline analyzes it. "
-        "No API calls — these are pre-canned results from real applications."
+        "No API calls — these are sample results from real applications."
     )
 
     if not results:
