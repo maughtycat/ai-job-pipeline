@@ -46,7 +46,7 @@ st.caption(
     "[GitHub](https://github.com/maughtycat/ai-job-pipeline)"
 )
 
-tab_demo, tab_stats, tab_tracking = st.tabs(["Pipeline Demo", "Application Stats", "Tracking"])
+tab_demo, tab_tracking = st.tabs(["Pipeline Demo", "Tracking"])
 
 with tab_demo:
     st.header("Pipeline Demo")
@@ -140,46 +140,6 @@ with tab_demo:
                 st.markdown(f"**{question}**")
                 st.markdown(answer)
 
-with tab_stats:
-    st.header("Application Stats")
-    agg = tracking["aggregate"] if tracking else {}
-    st.markdown(
-        f"Aggregated data from {agg.get('total_applied', 279)} tailored applications "
-        f"over {agg.get('weeks_active', 11)} weeks."
-    )
-
-    col1, col2, col3, col4, col5 = st.columns(5)
-    col1.metric("Total Applications", str(agg.get("total_applied", 279)))
-    col2.metric("Per Week", str(agg.get("per_week", 25)))
-    col3.metric("Recruiter Screens", str(agg.get("recruiter_screens", 10)))
-    col4.metric("HM Interviews", str(agg.get("hm_interviews", 8)))
-    col5.metric("Recruiter to HM Rate", agg.get("conversion_rate", "80%"))
-
-    st.divider()
-
-    st.subheader("Pipeline Funnel")
-    funnel = [
-        {"Stage": "Applied", "Count": agg.get("total_applied", 279)},
-        {"Stage": "Recruiter Screen", "Count": agg.get("recruiter_screens", 10)},
-        {"Stage": "HM Interview", "Count": agg.get("hm_interviews", 8)},
-        {"Stage": "Deep Dive / Take-home", "Count": agg.get("deep_dives", 1)},
-    ]
-    st.dataframe(funnel, use_container_width=True, hide_index=True)
-
-    st.subheader("Applications by Month")
-    timeline = [
-        {"Month": "June 2026", "Applications": 112},
-        {"Month": "July 2026", "Applications": 116},
-        {"Month": "August 2026 (partial)", "Applications": 51},
-    ]
-    st.dataframe(timeline, use_container_width=True, hide_index=True)
-
-    st.subheader("Fit Scores (from demo)")
-    score_data = [
-        {"Company": r["posting"]["company"], "Score": r["fit"]["score"], "Recommendation": r["fit"].get("recommendation", "")}
-        for r in results
-    ]
-    st.dataframe(score_data, use_container_width=True, hide_index=True)
 
 with tab_tracking:
     st.header("Application Tracking")
