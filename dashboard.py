@@ -153,12 +153,12 @@ with tab_tracking:
         agg = tracking["aggregate"]
         week = tracking["curated_week"]
 
-        # Aggregate metrics
+        # Weekly metrics
         c1, c2, c3, c4 = st.columns(4)
-        c1.metric("Total Applied", str(agg["total_applied"]))
-        c2.metric("Recruiter Screens", str(agg["recruiter_screens"]))
-        c3.metric("HM Interviews", str(agg["hm_interviews"]))
-        c4.metric("Conversion Rate", agg["conversion_rate"])
+        c1.metric("Applied", str(week["applied"]))
+        c2.metric("Rejected", str(week["rejected"]))
+        c3.metric("Interviewed", str(week["recruiter_screen"] + week["hm_interview"] + week["deep_dive"]))
+        c4.metric("Pending", str(week["pending"]))
 
         st.divider()
 
