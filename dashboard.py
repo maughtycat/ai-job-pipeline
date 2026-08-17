@@ -186,13 +186,14 @@ with tab_tracking:
     st.markdown(
         "The pipeline includes a SQLite-backed tracker that logs every application "
         "with status, fit score, salary range, and notes. Below is a curated sample "
-        "showing the tracking in action."
+        "from a single week showing the tracking in action."
     )
 
     if tracking:
         agg = tracking["aggregate"]
+        week = tracking["curated_week"]
 
-        # Status metrics
+        # Aggregate metrics
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Total Applied", str(agg["total_applied"]))
         c2.metric("Recruiter Screens", str(agg["recruiter_screens"]))
@@ -201,29 +202,19 @@ with tab_tracking:
 
         st.divider()
 
-        # Funnel visualization
-        st.subheader("Pipeline Funnel")
+        # One-week funnel
+        st.subheader(f"Funnel: {week['label']}")
         funnel_data = {
-            "Stage": ["Applied", "Recruiter Screen", "HM Interview", "Deep Dive"],
-            "Count": [agg["total_applied"], agg["recruiter_screens"], agg["hm_interviews"], agg["deep_dives"]],
+            "Stage": ["Applied", "Rejected", "Recruiter Screen", "HM Interview", "Deep Dive", "Pending"],
+            "Count": [week["applied"], week["rejected"], week["recruiter_screen"], week["hm_interview"], week["deep_dive"], week["pending"]],
         }
         st.bar_chart(funnel_data, x="Stage", y="Count", horizontal=True, color="#58a6ff")
-
-        # Weekly activity
-        st.subheader("Weekly Activity")
-        weekly = tracking.get("weekly_activity", [])
-        if weekly:
-            st.bar_chart(
-                {w["week"]: w["applied"] for w in weekly},
-                horizontal=False,
-                color="#3fb950",
-            )
 
         st.divider()
 
         # Sample applications
-        st.subheader("Sample Applications")
-        st.caption("Representative entries from the full tracker. Status reflects outcome after pipeline processing.")
+        st.subheader("Applications (25)")
+        st.caption("Every application from this week. Status reflects outcome after pipeline processing.")
         samples = tracking.get("sample_applications", [])
         if samples:
             st.dataframe(samples, use_container_width=True, hide_index=True)
