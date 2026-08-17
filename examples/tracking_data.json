@@ -1,0 +1,89 @@
+{
+  "aggregate": {
+    "total_applied": 279,
+    "per_week": 25,
+    "recruiter_screens": 10,
+    "hm_interviews": 8,
+    "deep_dives": 1,
+    "interviewing": 1,
+    "conversion_rate": "80%",
+    "date_range": ["2026-06-01", "2026-08-14"],
+    "weeks_active": 11
+  },
+  "weekly_activity": [
+    {"week": "Jun 2-6", "applied": 25, "rejected": 0},
+    {"week": "Jun 9-13", "applied": 25, "rejected": 0},
+    {"week": "Jun 16-20", "applied": 25, "rejected": 0},
+    {"week": "Jun 23-27", "applied": 25, "rejected": 0},
+    {"week": "Jun 30-Jul 4", "applied": 25, "rejected": 0},
+    {"week": "Jul 7-11", "applied": 25, "rejected": 0},
+    {"week": "Jul 14-18", "applied": 25, "rejected": 0},
+    {"week": "Jul 21-25", "applied": 26, "rejected": 0},
+    {"week": "Jul 28-Aug 1", "applied": 25, "rejected": 0},
+    {"week": "Aug 4-8", "applied": 25, "rejected": 0},
+    {"week": "Aug 11-14", "applied": 26, "rejected": 0}
+  ],
+  "status_breakdown": {
+    "Applied": 156,
+    "Rejected": 122,
+    "Interviewing": 1
+  },
+  "sample_applications": [
+    {
+      "date": "2026-06-05",
+      "company": "Harvey",
+      "role": "Support Operations Engineer",
+      "status": "Deep Dive",
+      "fit_score": 82
+    },
+    {
+      "date": "2026-06-04",
+      "company": "CivicPlus",
+      "role": "AI Enablement Engineer",
+      "status": "HM Interview",
+      "fit_score": 78
+    },
+    {
+      "date": "2026-07-08",
+      "company": "Crogl",
+      "role": "AI Engineer",
+      "status": "Recruiter Screen",
+      "fit_score": 75
+    },
+    {
+      "date": "2026-06-01",
+      "company": "Ascendion",
+      "role": "AI Engineer - Prompt",
+      "status": "Applied",
+      "fit_score": 70
+    },
+    {
+      "date": "2026-07-08",
+      "company": "Stripe",
+      "role": "Technical Writer, Docs Content",
+      "status": "Applied",
+      "fit_score": 68
+    },
+    {
+      "date": "2026-06-11",
+      "company": "GitLab",
+      "role": "AI Engineer",
+      "status": "Rejected",
+      "fit_score": 45
+    },
+    {
+      "date": "2026-06-15",
+      "company": "Airtable",
+      "role": "AI Agent Architect, Customer Experience",
+      "status": "Rejected",
+      "fit_score": 35
+    },
+    {
+      "date": "2026-06-09",
+      "company": "Stord",
+      "role": "Forward Deployed Engineer, AI Enablement",
+      "status": "Applied",
+      "fit_score": 72
+    }
+  ]
+}
