@@ -1,7 +1,7 @@
 """Relevance scorer — evaluates fit between a job posting and user profile."""
 
 from llm import call_llm_json
-from models import FitScore, JobPosting, Profile
+from models import FitResult, FitScore, JobPosting, Profile
 
 
 SYSTEM_PROMPT = """You evaluate how well a job posting matches a candidate's profile.
@@ -49,12 +49,14 @@ Experience: {posting.years_experience}
 
     prompt = f"CANDIDATE:\n{profile_text}\n\nJOB POSTING:\n{posting_text}"
     data = call_llm_json(prompt, system=SYSTEM_PROMPT)
+    data = {k: v for k, v in data.items() if v is not None}
+    fit = FitResult.model_validate(data)
 
     return FitScore(
-        score=data.get("score", 0),
-        breakdown=data.get("breakdown", {}),
-        reasoning=data.get("reasoning", ""),
-        red_flags=data.get("red_flags", []),
-        recommendation=data.get("recommendation", ""),
-        key_terms=data.get("key_terms", []),
+        score=fit.score,
+        breakdown=fit.breakdown,
+        reasoning=fit.reasoning,
+        red_flags=fit.red_flags,
+        recommendation=fit.recommendation,
+        key_terms=fit.key_terms,
     )

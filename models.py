@@ -4,6 +4,50 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 
+from pydantic import BaseModel, Field, field_validator
+
+
+def _as_list(v):
+    """LLMs return a bare string where a list was asked for; accept it as one item."""
+    if v is None:
+        return []
+    if isinstance(v, str):
+        return [v] if v.strip() else []
+    return v
+
+
+class ParsedPosting(BaseModel):
+    """LLM parse output, validated before it becomes a JobPosting."""
+    company: str = "Unknown"
+    role: str = "Unknown"
+    location: str = ""
+    remote_type: str = ""
+    salary_range: str = ""
+    required_skills: list[str] = []
+    preferred_skills: list[str] = []
+    years_experience: str = ""
+    responsibilities: list[str] = []
+    application_questions: list[str] = []
+
+    _coerce_lists = field_validator(
+        "required_skills", "preferred_skills", "responsibilities",
+        "application_questions", mode="before"
+    )(_as_list)
+
+
+class FitResult(BaseModel):
+    """LLM scoring output, validated before it becomes a FitScore."""
+    score: int = Field(ge=0, le=100)  # "high" or 150 must not reach the pipeline
+    breakdown: dict[str, int] = {}
+    reasoning: str = ""
+    red_flags: list[str] = []
+    recommendation: str = ""
+    key_terms: list[str] = []
+
+    _coerce_lists = field_validator(
+        "red_flags", "key_terms", mode="before"
+    )(_as_list)
+
 
 def parse_status(value: str) -> Optional["ApplicationStatus"]:
     """Map a user-supplied status string to the enum, or None if invalid.

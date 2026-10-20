@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from llm import call_llm_json
-from models import JobPosting
+from models import JobPosting, ParsedPosting
 
 
 def fetch_url(url: str) -> str:
@@ -40,18 +40,21 @@ def parse_posting(text: str, url: str = "") -> JobPosting:
     """Parse job posting text into a structured JobPosting."""
     prompt = f"Extract structured data from this job posting:\n\n{text[:12000]}"
     data = call_llm_json(prompt, system=SYSTEM_PROMPT)
+    # None values fall back to model defaults instead of failing the field
+    data = {k: v for k, v in data.items() if v is not None}
+    parsed = ParsedPosting.model_validate(data)
 
     return JobPosting(
-        company=data.get("company", "Unknown"),
-        role=data.get("role", "Unknown"),
-        location=data.get("location", ""),
-        remote_type=data.get("remote_type", ""),
-        salary_range=data.get("salary_range", ""),
-        required_skills=data.get("required_skills", []),
-        preferred_skills=data.get("preferred_skills", []),
-        years_experience=data.get("years_experience", ""),
-        responsibilities=data.get("responsibilities", []),
-        application_questions=data.get("application_questions", []),
+        company=parsed.company,
+        role=parsed.role,
+        location=parsed.location,
+        remote_type=parsed.remote_type,
+        salary_range=parsed.salary_range,
+        required_skills=parsed.required_skills,
+        preferred_skills=parsed.preferred_skills,
+        years_experience=parsed.years_experience,
+        responsibilities=parsed.responsibilities,
+        application_questions=parsed.application_questions,
         url=url,
         raw_text=text,
     )
