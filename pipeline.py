@@ -4,13 +4,14 @@
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
 import yaml
 
-from models import Application, ApplicationStatus, Profile
+from models import Application, ApplicationStatus, Profile, parse_status
 from parser import parse_input
 from scorer import score_job
 from generator import generate_materials
@@ -82,7 +83,9 @@ def cmd_analyze(args):
         },
     }
 
-    json_path = output_dir / f"{posting.company.lower().replace(' ', '_')}.json"
+    # company comes from LLM output; keep it filesystem-safe
+    safe_company = re.sub(r"[^\w.-]+", "_", posting.company.lower()).strip("_") or "posting"
+    json_path = output_dir / f"{safe_company}.json"
     with open(json_path, "w") as f:
         json.dump(results, f, indent=2)
     print(f"\n  Results saved to {json_path}")
@@ -116,7 +119,11 @@ def cmd_track(args):
         print(f"Added: {args.company} — {args.role} (id: {app_id})")
 
     elif args.track_action == "status":
-        update_status(args.company, args.status, notes=args.notes or "")
+        if parse_status(args.status) is None:
+            valid = ", ".join(s.value for s in ApplicationStatus)
+            sys.exit(f"Unknown status {args.status!r}. Valid: {valid}")
+        if not update_status(args.company, args.status, notes=args.notes or ""):
+            sys.exit(f"No application found for {args.company!r}")
         print(f"Updated: {args.company} → {args.status}")
 
     elif args.track_action == "list":

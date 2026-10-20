@@ -59,7 +59,8 @@ dealbreakers:
 
 reference_tone: |
   I build AI agents and the evaluation systems to know if they actually work.
-  That is the job, and I have been doing it for seven years.
+  That is the job. The seven years before that, I built the documentation
+  systems that taught me what good content engineering looks like.
 
   At Redwood, I built FlareGuard, an AI-powered content quality suite with
   automated benchmarks, quality scoring, and regression detection that prevented

@@ -49,7 +49,7 @@ def call_llm(
             wait = 2 ** attempt
             print(f"  Retry {attempt + 1}/{max_retries} after {wait}s: {e}")
             time.sleep(wait)
-    return ""
+    raise RuntimeError("call_llm made no attempts (max_retries <= 0?)")
 
 
 def call_llm_json(
@@ -59,9 +59,18 @@ def call_llm_json(
     temperature: float = 0.3,
     max_retries: int = 3,
 ) -> dict[str, Any]:
-    """Call LLM and parse response as JSON. Retries on parse failure."""
+    """Call LLM and parse response as JSON. Retries on API error and on parse failure."""
+    last_error: Exception = ValueError("no attempt made")
     for attempt in range(max_retries):
-        raw = call_llm(prompt, system, model, temperature, max_retries=1)
+        try:
+            raw = call_llm(prompt, system, model, temperature, max_retries=1)
+        except Exception as e:
+            last_error = e
+            if attempt == max_retries - 1:
+                raise
+            print(f"  Retry {attempt + 1}/{max_retries} after LLM error: {e}")
+            time.sleep(2 ** attempt)
+            continue
         try:
             cleaned = raw.strip()
             if cleaned.startswith("```"):
@@ -69,7 +78,9 @@ def call_llm_json(
             if cleaned.endswith("```"):
                 cleaned = cleaned.rsplit("```", 1)[0]
             return json.loads(cleaned)
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
+            last_error = e
             if attempt == max_retries - 1:
                 raise ValueError(f"LLM returned invalid JSON after {max_retries} attempts:\n{raw[:500]}")
-    return {}
+            time.sleep(2 ** attempt)
+    raise last_error  # unreachable in practice; every path above returns or raises

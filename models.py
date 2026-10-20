@@ -5,6 +5,17 @@ from enum import Enum
 from typing import Optional
 
 
+def parse_status(value: str) -> Optional["ApplicationStatus"]:
+    """Map a user-supplied status string to the enum, or None if invalid.
+
+    Validation lives here (not at read time) so one typo can never poison
+    every ApplicationStatus(row) call downstream."""
+    try:
+        return ApplicationStatus(value)
+    except ValueError:
+        return None
+
+
 class ApplicationStatus(Enum):
     APPLIED = "Applied"
     SCREENING = "Screening"

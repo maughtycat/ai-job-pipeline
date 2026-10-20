@@ -38,7 +38,7 @@ Look for application questions in sections like "How to apply", "Application que
 
 def parse_posting(text: str, url: str = "") -> JobPosting:
     """Parse job posting text into a structured JobPosting."""
-    prompt = f"Extract structured data from this job posting:\n\n{text[:4000]}"
+    prompt = f"Extract structured data from this job posting:\n\n{text[:12000]}"
     data = call_llm_json(prompt, system=SYSTEM_PROMPT)
 
     return JobPosting(

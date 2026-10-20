@@ -150,7 +150,6 @@ with tab_tracking:
     )
 
     if tracking:
-        agg = tracking["aggregate"]
         week = tracking["curated_week"]
 
         # Weekly metrics

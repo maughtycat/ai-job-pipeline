@@ -59,13 +59,20 @@ def update_status(
     company: str, status: str, notes: str = "", path: str = DB_PATH
 ) -> bool:
     db = get_db(path)
+    # scope to the most recent row: one company can hold several applications
+    latest = ("SELECT id FROM applications WHERE company = ? "
+              "ORDER BY date_applied DESC, id DESC LIMIT 1")
     if notes:
         db.execute(
-            "UPDATE applications SET status = ?, notes = notes || ? WHERE company = ?",
+            "UPDATE applications SET status = ?, notes = notes || ? "
+            "WHERE id = (" + latest + ")",
             (status, f"\n{notes}", company),
         )
     else:
-        db.execute("UPDATE applications SET status = ? WHERE company = ?", (status, company))
+        db.execute(
+            "UPDATE applications SET status = ? WHERE id = (" + latest + ")",
+            (status, company),
+        )
     db.commit()
     return db.total_changes > 0
 
