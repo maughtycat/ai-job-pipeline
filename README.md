@@ -12,7 +12,7 @@ accepted offer.
 
 ## Final Results
 
-The search concluded October 16, 2026 with an accepted offer.
+The search concluded in mid-October 2026 with an accepted offer.
 
 ![Final funnel](examples/sankey.svg)
 
