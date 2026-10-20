@@ -1,14 +1,14 @@
 {
   "aggregate": {
-    "total_applied": 279,
-    "per_week": 25,
-    "recruiter_screens": 10,
-    "hm_interviews": 8,
-    "deep_dives": 1,
-    "interviewing": 1,
-    "conversion_rate": "80%",
-    "date_range": ["2026-06-01", "2026-08-14"],
-    "weeks_active": 11
+    "total_applied": 414,
+    "per_week": 21,
+    "recruiter_screens": 15,
+    "hm_interviews": 10,
+    "deep_dives": 2,
+    "interviewing": 0,
+    "conversion_rate": "67%",
+    "date_range": ["2026-06-01", "2026-10-14"],
+    "weeks_active": 19
   },
   "curated_week": {
     "label": "June 2-8, 2026",

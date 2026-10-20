@@ -2,11 +2,23 @@
 
 An AI-powered tool that parses job postings, scores relevance against your profile, generates tailored resume bullets and cover letters, and tracks your applications.
 
-Built and used during my own job search: 279 tailored applications, 25 per week, 8 hiring manager interviews.
+Built and used during my own job search: 414 tailored applications over
+4.5 months, 15 first conversations, 10 hiring-manager rounds, and one
+accepted offer.
 
 ## Live Demo
 
 [Try the dashboard](https://ai-job-pipeline-kn.streamlit.app/) — browse sample pipeline results and application stats. No API key needed.
+
+## Final Results
+
+The search concluded October 16, 2026 with an accepted offer.
+
+![Final funnel](examples/sankey.svg)
+
+414 applications → 15 held conversations → 10 hiring-manager rounds →
+2 deep rounds → 1 offer. Full story:
+[maughtycat.github.io/portfolio/projects/job-search.html](https://maughtycat.github.io/portfolio/projects/job-search.html)
 
 ## Quick Start
 
