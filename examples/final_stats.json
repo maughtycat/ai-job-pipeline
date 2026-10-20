@@ -1,0 +1,27 @@
+{
+  "generated": "2026-10-19",
+  "source": "private tracking data; aggregates only, no company names",
+  "date_start": "2026-06-01",
+  "date_end": "2026-10-14",
+  "weeks": 19.3,
+  "avg_per_week": 21.5,
+  "unique_companies": 364,
+  "applications": 414,
+  "conversations": 15,
+  "screen_only": 5,
+  "hm_rounds": 8,
+  "deep_rounds": 2,
+  "offer": 1,
+  "never_responded": 209,
+  "rejected_no_conversation": 190,
+  "rejected_total": 204,
+  "no_conversation": 399,
+  "pto_skipped": 17,
+  "excluded": 5,
+  "hm_plus": 10,
+  "rates": {
+    "application_to_conversation": "3.6%",
+    "conversation_to_hm": "67%",
+    "application_to_offer": "0.24%"
+  }
+}
