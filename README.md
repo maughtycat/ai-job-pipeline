@@ -8,7 +8,7 @@ accepted offer.
 
 ## Live Demo
 
-[Try the dashboard](https://ai-job-pipeline-kn.streamlit.app/) — browse sample pipeline results and application stats. No API key needed.
+[Try the dashboard](https://ai-job-pipeline-kn.streamlit.app/) — browse sample pipeline results and application stats. No API key needed. Sleeps when idle, so the first click may take up to 30 seconds to wake it.
 
 ## Final Results
 
