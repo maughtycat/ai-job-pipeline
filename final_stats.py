@@ -93,80 +93,149 @@ def chain_ok(ct):
 
 
 def build_sankey(stats):
-    """Linear funnel Sankey. Floors exist because the scale is 414:1 —
-    without them the 1-offer node is sub-pixel. Junction mismatch <=2px is
-    invisible at 0.3 opacity; do not chase exact conservation with floors on."""
-    W, H, PAD_T, PAD_B, NODE_W, GAP = 960, 470, 52, 64, 14, 30
-    scale = (H - PAD_T - PAD_B) / stats["applications"]
+    """Conserved-flow funnel: continuing stage on top of each column, that
+    stage's drop-offs stacked directly beneath it, so every ribbon runs node
+    edge to node edge. Stage labels sit above their node, drop-off labels
+    beside their node, never over a ribbon. Two semantic colors: blue =
+    advanced, red = dropped out (red/blue is a colorblind-safe pair; the old
+    red/green was not).
+    shortcut: heights are floored at 6px because 414:1 makes the 1-offer node
+    sub-pixel; floor rounding can shift ribbon junctions by up to ~8px,
+    invisible at these opacities. Labels carry the exact values. """
+    W, H, NW, TOP, GAP, FLOOR, M = 960, 560, 14, 80, 18, 8, 44
+    STAGE_Y = 64
+    n = 5
+    xs = [M + i * (W - 2 * M - NW) / (n - 1) for i in range(n)]
+    total = stats["applications"]
+    # budget: below title band (80), above footnote band (60), minus the two
+    # stack gaps col1 needs for its two drop-offs
+    scale = (H - TOP - 60 - 2 * GAP) / total
+
+    def h(v):
+        return max(v * scale, FLOOR)
+
+    # columns: (stage label, continuing value, [drop-off (label, value)...])
+    # every column's values sum to the flow entering it (conserved)
     cols = [
-        ("Applied", stats["applications"],
+        ("Applied", total,
          [("Never answered", stats["never_responded"]),
           ("Rejected, no conversation", stats["rejected_no_conversation"])]),
         ("Conversation", stats["conversations"],
          [("Stopped at screen", stats["screen_only"])]),
-        ("HM round", stats["hm_rounds"] + stats["deep_rounds"],
+        ("Reached HM", stats["hm_rounds"] + stats["deep_rounds"],
          [("Stopped at HM", stats["hm_rounds"])]),
         ("Deep round", stats["deep_rounds"],
          [("Rejected after deep", stats["deep_rounds"] - stats["offer"])]),
         ("Offer accepted", stats["offer"], []),
     ]
-    n = len(cols)
-    M = 40
-    xs = [M + i * (W - 2 * M - NODE_W) / (n - 1) for i in range(n)]
-    band = lambda v: max(v * scale, 2)
-    node = lambda v: max(v * scale, 3)
-    parts, links, labels = [], [], []
-    for i, (label, val, drops) in enumerate(cols):
-        h = node(val)
-        y = PAD_T
-        parts.append(f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{NODE_W}" '
-                     f'height="{h:.1f}" rx="3" fill="#58a6ff"/>')
-        labels.append(f'<text x="{xs[i]:.1f}" y="{y - 14:.1f}" font-family="Helvetica,Arial" '
-                      f'font-size="14" font-weight="bold" fill="#e6edf3">{label} {val}</text>')
-        if i < n - 1:
-            # continuing flow is target-height, top-aligned; drops peel the
-            # remaining bands below it
-            h_next = node(cols[i + 1][1])
-            x0, x1 = xs[i] + NODE_W, xs[i + 1]
-            cx = (x0 + x1) / 2
-            links.append(
-                f'<path d="M{x0:.1f},{y:.1f} C{cx:.1f},{y:.1f} {cx:.1f},{y:.1f} '
-                f'{x1:.1f},{y:.1f} L{x1:.1f},{y + h_next:.1f} C{cx:.1f},{y + h_next:.1f} '
-                f'{cx:.1f},{y + h_next:.1f} {x0:.1f},{y + h_next:.1f} Z" '
-                f'fill="#3fb950" opacity="0.3"/>')
-        # drops peel from the bottom bands, side-by-side so labels never stack
-        cursor = y + band(val) - sum(band(d[1]) for d in drops)
-        cursor = max(cursor, y)
-        for k, (dl, dv) in enumerate(drops):
-            dh = band(dv)
-            dx = xs[i] + NODE_W + 44 + k * (NODE_W + 108)
-            rect_y = cursor
-            parts.append(f'<rect x="{dx:.1f}" y="{rect_y:.1f}" width="{NODE_W}" '
-                         f'height="{dh:.1f}" rx="3" fill="#f85149"/>')
-            labels.append(f'<text x="{dx + NODE_W / 2:.1f}" y="{rect_y + dh + 15:.1f}" '
-                          f'text-anchor="middle" font-family="Helvetica,Arial" font-size="11" '
-                          f'fill="#8b949e">{dl} {dv}</text>')
-            x_a, x_b = xs[i] + NODE_W, dx
-            cx = (x_a + x_b) / 2
-            links.append(
-                f'<path d="M{x_a:.1f},{rect_y:.1f} C{cx:.1f},{rect_y:.1f} {cx:.1f},{rect_y:.1f} '
-                f'{x_b:.1f},{rect_y:.1f} L{x_b:.1f},{rect_y + dh:.1f} C{cx:.1f},{rect_y + dh:.1f} '
-                f'{cx:.1f},{rect_y + dh:.1f} {x_a:.1f},{rect_y + dh:.1f} Z" '
-                f'fill="#f85149" opacity="0.22"/>')
-            cursor += dh
-    title = (f'{stats["applications"]} applications → {stats["conversations"]} conversations → '
-             f'{stats["hm_rounds"] + stats["deep_rounds"]} HM rounds → '
+
+    # node heights: a continuing node is at least as tall as what it emits,
+    # so ribbon source spans partition it exactly even after floor rounding
+    node_h = []
+    for label, val, drops in cols:
+        out_h = h(val)
+        node_h.append(out_h)
+    for j in range(len(cols) - 1):
+        emitted = node_h[j + 1] + sum(h(d[1]) for d in cols[j][2])
+        node_h[j] = max(node_h[j], emitted)
+
+    # place nodes: each column holds its continuing node on top, plus the
+    # drop-offs released by the PREVIOUS column's flows stacked beneath
+    placed = []   # list per column: [(kind, label, value, x, y, height), ...]
+    for j, (label, val, drops) in enumerate(cols):
+        y = TOP
+        col = [("stage", label, val, xs[j], y, node_h[j])]
+        y += node_h[j]
+        if j > 0:
+            for dlabel, dval in cols[j - 1][2]:
+                y += GAP
+                col.append(("drop", dlabel, dval, xs[j], y, h(dval)))
+                y += h(dval)
+        placed.append(col)
+
+    ribbons, marks, texts = [], [], []
+
+    def ribbon(x0, y0, x1, y1, hh, fill, opacity):
+        m = (x0 + x1) / 2
+        ribbons.append(
+            f'<path d="M{x0:.1f},{y0:.1f} C{m:.1f},{y0:.1f} {m:.1f},{y1:.1f} '
+            f'{x1:.1f},{y1:.1f} L{x1:.1f},{y1 + hh:.1f} C{m:.1f},{y1 + hh:.1f} '
+            f'{m:.1f},{y0 + hh:.1f} {x0:.1f},{y0 + hh:.1f} Z" '
+            f'fill="{fill}" opacity="{opacity}"/>')
+
+    # ribbons: leaving the continuing node of column j, arriving at the
+    # continuing node and each drop-off of column j+1, cursor from node top
+    for j in range(len(cols) - 1):
+        label, val, drops = cols[j]
+        src_node = placed[j][0]
+        cursor = src_node[4]
+        targets = [(cols[j + 1][0], node_h[j + 1], placed[j + 1][0][4], "#58a6ff", 0.60)]
+        for k, (dlabel, dval) in enumerate(drops):
+            t = placed[j + 1][1 + k]
+            targets.append((dlabel, h(dval), t[4], "#f85149", 0.45))
+        x0 = xs[j] + NW
+        for tlabel, th, ty, color, op in targets:
+            ribbon(x0, cursor, xs[j + 1], ty, th, color, op)
+            cursor += th
+
+    # nodes
+    for col in placed:
+        for kind, label, val, x, y, hh in col:
+            color = "#58a6ff" if kind == "stage" else "#f85149"
+            marks.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{NW}" '
+                         f'height="{hh:.1f}" rx="3" fill="{color}"/>')
+
+    # labels: stages above the node (first starts at its x, last ends at its
+    # right edge so it can never clip), drop-offs beside the node (left side
+    # when the right side would run off the canvas)
+    for j, col in enumerate(placed):
+        for i, (kind, label, val, x, y, hh) in enumerate(col):
+            value = f"{val:g}"
+            if kind == "stage":
+                if j == 0:
+                    anchor, lx = "start", x
+                elif j == len(placed) - 1:
+                    anchor, lx = "end", x + NW
+                else:
+                    anchor, lx = "middle", x + NW / 2
+                texts.append(
+                    f'<text x="{lx:.1f}" y="{STAGE_Y}" text-anchor="{anchor}" '
+                    f'font-family="Helvetica,Arial" font-size="14" fill="#e6edf3">'
+                    f'<tspan font-weight="bold">{label} </tspan>'
+                    f'<tspan fill="#8b949e">{value}</tspan></text>')
+            else:
+                full = f"{label} {value}"
+                est = len(full) * 6.1
+                if hh >= 40:
+                    # big drop-off: label beside the node, vertically centered
+                    anchor = "start"
+                    lx = min(x + NW + 8, W - 4 - est)
+                    ly = y + hh / 2 + 4
+                else:
+                    # small drop-off: label beneath the node, clear of every
+                    # ribbon; clamped so it can never leave the canvas
+                    anchor = "start"
+                    lx = min(x, W - 4 - est)
+                    ly = y + hh + 15
+                texts.append(
+                    f'<text x="{lx:.1f}" y="{ly:.1f}" '
+                    f'text-anchor="{anchor}" font-family="Helvetica,Arial" '
+                    f'font-size="12" fill="#c9d1d9">{label} '
+                    f'<tspan fill="#e6edf3" font-weight="bold">{value}</tspan></text>')
+
+    title = (f'{stats["applications"]} applications → {stats["conversations"]} '
+             f'conversations → {stats["hm_rounds"] + stats["deep_rounds"]} HM rounds → '
              f'{stats["deep_rounds"]} deep rounds → {stats["offer"]} offer')
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%" '
         f'role="img" aria-label="Job search funnel: {title}">'
         f'<rect width="{W}" height="{H}" fill="#0f1117" rx="8"/>'
-        f'<text x="{M}" y="30" font-family="Helvetica,Arial" font-size="15" '
+        f'<text x="{M}" y="28" font-family="Helvetica,Arial" font-size="15" '
         f'font-weight="bold" fill="#58a6ff">{title}</text>'
-        + "".join(links) + "".join(parts) + "".join(labels)
-        + f'<text x="{M}" y="{H - 20}" font-family="Helvetica,Arial" font-size="11" '
-          f'fill="#8b949e">{stats["date_start"]} to {stats["date_end"]}, '
-          f'{stats["weeks"]} weeks. Green = advanced. Red = dropped out.</text>'
+        + "".join(ribbons) + "".join(marks) + "".join(texts)
+        + f'<text x="{M}" y="{H - 14}" font-family="Helvetica,Arial" font-size="11" '
+          f'fill="#c9d1d9">{stats["date_start"]} to {stats["date_end"]}, '
+          f'{stats["weeks"]} weeks. Blue = advanced. Red = dropped out.</text>'
         f'</svg>')
 
 
